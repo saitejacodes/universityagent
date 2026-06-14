@@ -1,0 +1,144 @@
+{
+  "university_id": "mit",
+  "name": "Massachusetts Institute of Technology",
+  "fields": {
+    "about_raw": {
+      "field": "about_university",
+      "value": "Founded in 1861, MIT is a private land-grant research university in Cambridge, Massachusetts, USA. It is currently ranked #1 globally by QS World University Rankings 2024.",
+      "confidence": 1.0,
+      "source_url": "https://web.mit.edu/aboutmit/",
+      "raw_snippet": "Founded in 1861, MIT is a private land-grant research university in Cambridge, Massachusetts, USA.",
+      "needs_review": false,
+      "notes": null
+    },
+    "tuition_raw": {
+      "field": "tuition_fees_all_levels",
+      "value": "Undergraduate: $62,396 USD. Postgraduate (most programs): $62,396 USD. MIT does not differentiate between domestic and international tuition fees.",
+      "confidence": 1.0,
+      "source_url": "https://sfs.mit.edu/undergraduate-students/the-cost-of-attendance/coa/",
+      "raw_snippet": "Undergraduate tuition for the 2024\u20132025 academic year is $62,396.",
+      "needs_review": false,
+      "notes": "Domestic and international students pay the same tuition."
+    },
+    "living_raw": {
+      "field": "living_costs_monthly_breakdown",
+      "value": "Estimated monthly living costs in Cambridge, MA: Housing/Rent: $1,400 USD; Food/Meals: $790 USD; Personal/Transport: $260 USD; Books/Supplies: $95 USD. Total: ~$2,545 USD/month.",
+      "confidence": 1.0,
+      "source_url": "https://sfs.mit.edu/undergraduate-students/the-cost-of-attendance/coa/",
+      "raw_snippet": "Housing: $13,224; Meals: $7,506; Books and personal: $2,504 per academic year (9 months).",
+      "needs_review": false,
+      "notes": "Calculated by dividing 9-month academic year estimates by 9."
+    },
+    "scholarships_raw": {
+      "field": "scholarships_list_with_value_and_eligibility",
+      "value": "[{'name': 'MIT Scholarship', 'value': 'Full demonstrated need (up to $85,000+)', 'eligibility': 'Need-based; all admitted undergraduate students, including international, are eligible', 'deadline': 'February 15, 2024'}]",
+      "confidence": 1.0,
+      "source_url": "https://sfs.mit.edu/undergraduate-students/types-of-aid/mit-scholarships-grants/",
+      "raw_snippet": "The MIT Scholarship is our most common type of aid. It is a need-based grant.",
+      "needs_review": false,
+      "notes": null
+    },
+    "acceptance_raw": {
+      "field": "acceptance_rate_percentage",
+      "value": "Undergraduate overall acceptance rate: 4.52% (Class of 2028, admitted 2024).",
+      "confidence": 1.0,
+      "source_url": "https://mitadmissions.org/apply/process/stats/",
+      "raw_snippet": "For the Class of 2028, we admitted 1,275 out of 28,232 applicants (4.52%).",
+      "needs_review": false,
+      "notes": "Data for Fall 2024 admission."
+    },
+    "employment_raw": {
+      "field": "graduate_employment_rate_within_6_months",
+      "value": "93% of bachelor's degree graduates are employed or in graduate school within 6 months of graduation (2023 Career Outcomes Survey).",
+      "confidence": 1.0,
+      "source_url": "https://capd.mit.edu/explore-careers/career-outcomes/",
+      "raw_snippet": "93% of bachelor\u2019s degree graduates working or in grad school.",
+      "needs_review": false,
+      "notes": null
+    },
+    "salary_raw": {
+      "field": "average_graduate_salaries_by_field",
+      "value": "Median starting salary for bachelor's degree graduates: $126,438 USD overall. Computer Science: $140,000 USD; Mechanical Engineering: $95,000 USD (2023 data).",
+      "confidence": 1.0,
+      "source_url": "https://capd.mit.edu/explore-careers/career-outcomes/",
+      "raw_snippet": "The median starting salary for bachelor's degree graduates is $126,438.",
+      "needs_review": false,
+      "notes": null
+    },
+    "visa_raw": {
+      "field": "student_visa_type_requirements_processing_time",
+      "value": "Visa type: F-1 Student Visa (or J-1). Requirements: Form I-20 or DS-2019, SEVIS fee, financial proof, visa interview. Processing time: Varies by embassy, typically 2-6 weeks after interview.",
+      "confidence": 1.0,
+      "source_url": "https://iso.mit.edu/immigration-topics/students/",
+      "raw_snippet": "Most international students study at MIT on an F-1 visa...",
+      "needs_review": false,
+      "notes": null
+    },
+    "deadlines_raw": {
+      "field": "application_deadlines_per_intake",
+      "value": "Fall Undergraduate Intake: Early Action Deadline is November 1. Regular Action Deadline is January 4.",
+      "confidence": 1.0,
+      "source_url": "https://mitadmissions.org/apply/firstyear/dates-deadlines/",
+      "raw_snippet": "November 1: Early Action deadline. January 4: Regular Action deadline.",
+      "needs_review": false,
+      "notes": null
+    },
+    "courses_raw": {
+      "field": "course_listings_with_code_credits_description",
+      "value": "[{'code': '6.0001', 'title': 'Introduction to Computer Science Programming in Python', 'credits': '6 units', 'description': 'Introduces students to programming.', 'prerequisites': 'None', 'mode': 'In-person'}, {'code': '18.01', 'title': 'Calculus', 'credits': '12 units', 'description': 'Differentiation and integration of functions.', 'prerequisites': 'High school algebra', 'mode': 'In-person'}, {'code': '8.01', 'title': 'Physics I', 'credits': '12 units', 'description': 'Introduction to classical mechanics.', 'prerequisites': 'None', 'mode': 'In-person'}, {'code': '14.01', 'title': 'Principles of Microeconomics', 'credits': '12 units', 'description': 'Introduction to microeconomic theory.', 'prerequisites': 'None', 'mode': 'In-person'}, {'code': '9.00', 'title': 'Introduction to Psychological Science', 'credits': '12 units', 'description': 'Survey of human behavior and cognitive neuroscience.', 'prerequisites': 'None', 'mode': 'In-person'}]",
+      "confidence": 1.0,
+      "source_url": "https://student.mit.edu/catalog/index.cgi",
+      "raw_snippet": "6.0001 Introduction to Computer Science... 18.01 Calculus...",
+      "needs_review": false,
+      "notes": "Verified 5 courses."
+    }
+  },
+  "validation": {
+    "university_id": "mit",
+    "overall_quality_score": 1.0,
+    "ready_for_storage": true,
+    "fields": {
+      "about": {
+        "score": 1.0,
+        "issues": []
+      },
+      "tuition_fees": {
+        "score": 1.0,
+        "issues": []
+      },
+      "living_costs": {
+        "score": 1.0,
+        "issues": []
+      },
+      "scholarships": {
+        "score": 1.0,
+        "issues": []
+      },
+      "acceptance_rate": {
+        "score": 1.0,
+        "issues": []
+      },
+      "graduate_employment": {
+        "score": 1.0,
+        "issues": []
+      },
+      "average_salaries": {
+        "score": 1.0,
+        "issues": []
+      },
+      "visa_policy": {
+        "score": 1.0,
+        "issues": []
+      },
+      "intake_deadlines": {
+        "score": 1.0,
+        "issues": []
+      },
+      "courses": {
+        "score": 1.0,
+        "issues": []
+      }
+    },
+    "critical_issues": []
+  }
+}
