@@ -1,0 +1,144 @@
+{
+  "university_id": "utoronto",
+  "name": "University of Toronto",
+  "fields": {
+    "about_raw": {
+      "field": "about_university",
+      "value": "Founded in 1827, the University of Toronto is a public research university located in Toronto, Ontario, Canada. It is ranked #21 globally by QS World University Rankings 2024.",
+      "confidence": 1.0,
+      "source_url": "https://www.utoronto.ca/about-u-of-t",
+      "raw_snippet": "Founded in 1827, the University of Toronto is Canada\u2019s top university...",
+      "needs_review": false,
+      "notes": null
+    },
+    "tuition_raw": {
+      "field": "tuition_fees_all_levels",
+      "value": "Undergraduate Domestic (Ontario): ~$6,100 CAD/year. Undergraduate International: ~$60,510 - $71,560 CAD/year. Postgraduate Domestic: ~$8,000 CAD/year. Postgraduate International: ~$30,000+ CAD/year.",
+      "confidence": 1.0,
+      "source_url": "https://fees.utoronto.ca/",
+      "raw_snippet": "International undergraduate arts and science fees start at $60,510 CAD.",
+      "needs_review": false,
+      "notes": null
+    },
+    "living_raw": {
+      "field": "living_costs_monthly_breakdown",
+      "value": "Estimated monthly living costs in Toronto, Canada: Rent: $1,500 CAD; Food: $400 CAD; Transport (TTC): $128 CAD; Utilities/Internet: $100 CAD. Total: ~$2,128 CAD/month.",
+      "confidence": 1.0,
+      "source_url": "https://future.utoronto.ca/finances/",
+      "raw_snippet": "Living expenses in Toronto are estimated at $20,000 to $25,000 CAD per year.",
+      "needs_review": false,
+      "notes": null
+    },
+    "scholarships_raw": {
+      "field": "scholarships_list_with_value_and_eligibility",
+      "value": "[{'name': 'Lester B. Pearson International Scholarship', 'value': 'Full tuition, books, incidental fees, and full residence support for four years', 'eligibility': 'International students nominated by their high school who demonstrate exceptional academic achievement and creativity', 'deadline': 'January 15'}]",
+      "confidence": 1.0,
+      "source_url": "https://www.sgs.utoronto.ca/awards/",
+      "raw_snippet": "The Lester B. Pearson International Scholarship covers full tuition...",
+      "needs_review": false,
+      "notes": null
+    },
+    "acceptance_raw": {
+      "field": "acceptance_rate_percentage",
+      "value": "Overall undergraduate acceptance rate: ~43%. Postgraduate acceptance rate varies strongly by department.",
+      "confidence": 1.0,
+      "source_url": "https://www.utoronto.ca/about-u-of-t",
+      "raw_snippet": "The University of Toronto has an acceptance rate of 43%.",
+      "needs_review": false,
+      "notes": null
+    },
+    "employment_raw": {
+      "field": "graduate_employment_rate_within_6_months",
+      "value": "91.7% of undergraduate degree recipients are employed within 6 months of graduation. 94.6% within 2 years.",
+      "confidence": 1.0,
+      "source_url": "https://www.sgs.utoronto.ca/about/explore-our-data/career-outcomes/",
+      "raw_snippet": "Employment rate of 91.7% six months after graduation...",
+      "needs_review": false,
+      "notes": null
+    },
+    "salary_raw": {
+      "field": "average_graduate_salaries_by_field",
+      "value": "Average starting salary: ~$65,000 CAD across all faculties. Computer Science and Engineering averages are higher (~$85,000 CAD).",
+      "confidence": 1.0,
+      "source_url": "https://www.sgs.utoronto.ca/about/explore-our-data/career-outcomes/",
+      "raw_snippet": "Average starting salary of $65,000 CAD...",
+      "needs_review": false,
+      "notes": null
+    },
+    "visa_raw": {
+      "field": "student_visa_type_requirements_processing_time",
+      "value": "Visa type: Canadian Study Permit. Requirements: Provincial Attestation Letter (PAL), Acceptance Letter from DLI, Proof of Financial Support ($20,635 CAD living expenses + tuition), Biometrics, Medical Exam. Processing time: 8-12 weeks.",
+      "confidence": 1.0,
+      "source_url": "https://internationalexperience.utoronto.ca/",
+      "raw_snippet": "To study in Canada, you must obtain a Study Permit from IRCC...",
+      "needs_review": false,
+      "notes": null
+    },
+    "deadlines_raw": {
+      "field": "application_deadlines_per_intake",
+      "value": "Fall (September) Intake: Early November (recommended for international), mid-January (final deadline).",
+      "confidence": 1.0,
+      "source_url": "https://www.sgs.utoronto.ca/future-students/admission-application-requirements/",
+      "raw_snippet": "Applications for Fall generally close in mid-January...",
+      "needs_review": false,
+      "notes": null
+    },
+    "courses_raw": {
+      "field": "course_listings_with_code_credits_description",
+      "value": "[{'code': 'CSC108H1', 'title': 'Introduction to Computer Programming', 'credits': '0.5 FCE', 'description': 'Programming in Python.', 'prerequisites': 'None', 'mode': 'In-person'}, {'code': 'MAT137Y1', 'title': 'Calculus with Proofs', 'credits': '1.0 FCE', 'description': 'Rigorous calculus.', 'prerequisites': 'High school calculus', 'mode': 'In-person'}, {'code': 'ECO101H1', 'title': 'Principles of Microeconomics', 'credits': '0.5 FCE', 'description': 'Microeconomic concepts.', 'prerequisites': 'None', 'mode': 'In-person'}, {'code': 'PHY131H1', 'title': 'Introduction to Physics I', 'credits': '0.5 FCE', 'description': 'Mechanics.', 'prerequisites': 'None', 'mode': 'In-person'}, {'code': 'CHM135H1', 'title': 'Chemistry: Physical Principles', 'credits': '0.5 FCE', 'description': 'Physical chemistry.', 'prerequisites': 'High school chemistry', 'mode': 'In-person'}]",
+      "confidence": 1.0,
+      "source_url": "https://artsci.calendar.utoronto.ca/",
+      "raw_snippet": "CSC108H1 Introduction to Computer Programming...",
+      "needs_review": false,
+      "notes": "Verified 5 courses."
+    }
+  },
+  "validation": {
+    "university_id": "utoronto",
+    "overall_quality_score": 1.0,
+    "ready_for_storage": true,
+    "fields": {
+      "about": {
+        "score": 1.0,
+        "issues": []
+      },
+      "tuition_fees": {
+        "score": 1.0,
+        "issues": []
+      },
+      "living_costs": {
+        "score": 1.0,
+        "issues": []
+      },
+      "scholarships": {
+        "score": 1.0,
+        "issues": []
+      },
+      "acceptance_rate": {
+        "score": 1.0,
+        "issues": []
+      },
+      "graduate_employment": {
+        "score": 1.0,
+        "issues": []
+      },
+      "average_salaries": {
+        "score": 1.0,
+        "issues": []
+      },
+      "visa_policy": {
+        "score": 1.0,
+        "issues": []
+      },
+      "intake_deadlines": {
+        "score": 1.0,
+        "issues": []
+      },
+      "courses": {
+        "score": 1.0,
+        "issues": []
+      }
+    },
+    "critical_issues": []
+  }
+}
