@@ -10,7 +10,7 @@ from extractor import Extractor
 from validator import Validator
 from database import Database
 from evaluator import Evaluator
-from models import UniversityData, AboutUniversity, FieldMeta
+from models import UniversityData, AboutUniversity, FieldMeta, AcceptanceRate, VisaPolicy
 
 # Configure logging — shows progress clearly in terminal so scraping issues
 # are visible in real time rather than buried in a final summary
@@ -36,7 +36,7 @@ def save_sample_output(data: dict, university_id: str) -> None:
     logger.info(f"Sample output saved: {out_path}")
 
 
-def build_university_data(uid: str, name: str, raw_data: dict, timestamp: str) -> UniversityData:
+def build_university_data(uid: str, name: str, raw_data: dict, timestamp: str, config: dict) -> UniversityData:
     """
     Map raw LLM extraction dicts into typed Pydantic models.
 
@@ -73,10 +73,45 @@ def build_university_data(uid: str, name: str, raw_data: dict, timestamp: str) -
         except Exception as e:
             logger.warning(f"AboutUniversity validation failed for {uid}: {e}")
 
+    # --- AcceptanceRate ---
+    # Map acceptance rate to typed model so Pydantic catches implausible values
+    # (e.g. rate > 100, non-numeric strings) at runtime rather than storing bad data.
+    acceptance_raw = raw_data.get("acceptance_raw", {})
+    acceptance = None
+    if acceptance_raw.get("value") is not None:
+        try:
+            rate_val = acceptance_raw["value"]
+            rate = float(str(rate_val).replace("%", "").strip()) if rate_val else None
+            acceptance = AcceptanceRate(
+                overall_percent=rate,
+                meta=meta(acceptance_raw),
+            )
+        except Exception as e:
+            logger.warning(f"AcceptanceRate validation failed for {uid}: {e}")
+
+    # --- VisaPolicy ---
+    # Visa type is country-specific (F-1 for USA, Subclass 500 for Australia, etc.)
+    # Mapping to a typed model ensures the field is always structured the same way
+    # regardless of how the LLM phrases the extraction.
+    visa_raw = raw_data.get("visa_raw", {})
+    visa = None
+    if visa_raw.get("value"):
+        try:
+            v = visa_raw["value"]
+            visa = VisaPolicy(
+                country=config.get("country", "") if isinstance(v, dict) else "",
+                visa_type=v.get("visa_type") if isinstance(v, dict) else str(v),
+                meta=meta(visa_raw),
+            )
+        except Exception as e:
+            logger.warning(f"VisaPolicy validation failed for {uid}: {e}")
+
     return UniversityData(
         university_id=uid,
         university_name=name,
         about=about,
+        acceptance_rate=acceptance,
+        visa_policy=visa,
         scrape_timestamp=timestamp,
         # overall_confidence is set from the about field's confidence as a proxy;
         # validator.py computes the true per-field quality score separately
@@ -127,7 +162,7 @@ async def process_university(
     # then store both the typed dump and the raw fields to SQLite
     logger.info("Step 4: Storing to database...")
     timestamp = datetime.utcnow().isoformat()
-    typed_data = build_university_data(uid, name, raw_data, timestamp)
+    typed_data = build_university_data(uid, name, raw_data, timestamp, config)
 
     db.upsert_raw_fields(uid, raw_data)
     # Store typed model dump so DB contains schema-validated data, not raw LLM output
