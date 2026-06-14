@@ -314,3 +314,4 @@ class Extractor:
         results["courses_raw"] = courses_raw
 
         return results
+
