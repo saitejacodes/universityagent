@@ -106,12 +106,19 @@ class Evaluator:
         lines.append("|------------|-------|-----------------|-------------------------|--------|")
 
         # Pull actual extracted values from DB to pre-populate the table
+        # Pre-populate ground truth table with all 10 fields so the manual
+        # spot-check covers full breadth, not just 5 fields.
         field_map = {
+            "about_university": "about_raw",
             "tuition_fees": "tuition_raw",
+            "living_costs": "living_raw",
+            "scholarships": "scholarships_raw",
             "acceptance_rate": "acceptance_raw",
-            "about": "about_raw",
-            "intake_deadlines": "deadlines_raw",
+            "graduate_employment": "employment_raw",
+            "average_salaries": "salary_raw",
             "visa_policy": "visa_raw",
+            "intake_deadlines": "deadlines_raw",
+            "course_listings": "courses_raw",
         }
         for uni in universities:
             for display_field, db_field in field_map.items():
@@ -140,7 +147,7 @@ class Evaluator:
         # --- Methodology ---
         lines.append("\n## Methodology\n")
         lines.append(
-            "- **Model**: Groq `llama3-70b-8192` at `temperature=0.0`. "
+            "- **Model**: Groq `llama-3.3-70b-versatile` at `temperature=0.0`. "
             "Deterministic output ensures the same tuition fee is returned consistently "
             "across re-runs — essential for reproducible evaluation."
         )
