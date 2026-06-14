@@ -1,18 +1,21 @@
 import os
 import json
 import logging
+import time
 from groq import Groq
 from dotenv import load_dotenv
 
 load_dotenv()
 logger = logging.getLogger(__name__)
 
-# llama-3.3-70b-versatile is the current production successor to llama3-70b-8192
-# (which was decommissioned by Groq on 2025-06-14). The 70B class is chosen over
-# 8B because it reliably returns valid JSON and correctly handles "return null if
-# not found" — the 8B model frequently hallucinates values or ignores the null instruction.
-# 128k context window gives us room to pass full page text without truncation concerns.
-GROQ_MODEL = "llama-3.3-70b-versatile"
+# llama-3.1-8b-instant is chosen for production use because Groq's free tier gives
+# it 131,072 TPM (tokens per minute) vs only 12,000 TPM for the 70B models.
+# The 70B model produces marginally better JSON but is unusable at scale on the
+# free tier — after 4 extraction calls the rate limit is exhausted and all subsequent
+# fields return null. The 8B model with temperature=0.0 and a strict JSON schema
+# prompt produces reliable extraction for structured university data.
+# 128k context window gives us room to pass full page text without truncation.
+GROQ_MODEL = "llama-3.1-8b-instant"
 
 SYSTEM_PROMPT = """You are an expert university data extraction agent.
 
@@ -60,28 +63,33 @@ class Extractor:
         A hallucinated value at temperature=0.3 could score 0.95 confidence and still
         be wrong, and there's no way to detect that without cross-validation.
         """
-        try:
-            response = self.client.chat.completions.create(
-                model=GROQ_MODEL,
-                messages=[
-                    {"role": "system", "content": SYSTEM_PROMPT},
-                    {"role": "user", "content": user_prompt},
-                ],
-                temperature=0.0,
-                max_tokens=1024,
-            )
-            raw = response.choices[0].message.content.strip()
-            # Some models prepend ```json fences despite explicit instructions not to.
-            # Stripping them here is a defensive measure — we shouldn't need it, but
-            # it prevents a hard crash when the model ignores formatting instructions.
-            raw = raw.replace("```json", "").replace("```", "").strip()
-            return json.loads(raw)
-        except json.JSONDecodeError as e:
-            logger.error(f"JSON parse error: {e}")
-            return {"value": None, "confidence": 0.0, "needs_review": True, "notes": "parse_error"}
-        except Exception as e:
-            logger.error(f"Groq API error: {e}")
-            return {"value": None, "confidence": 0.0, "needs_review": True, "notes": str(e)}
+        for attempt in range(8):
+            try:
+                response = self.client.chat.completions.create(
+                    model=GROQ_MODEL,
+                    messages=[
+                        {"role": "system", "content": SYSTEM_PROMPT},
+                        {"role": "user", "content": user_prompt},
+                    ],
+                    temperature=0.0,
+                    max_tokens=1024,
+                )
+                raw = response.choices[0].message.content.strip()
+                raw = raw.replace("```json", "").replace("```", "").strip()
+                return json.loads(raw)
+            except json.JSONDecodeError as e:
+                logger.error(f"JSON parse error: {e}")
+                return {"value": None, "confidence": 0.0, "needs_review": True, "notes": "parse_error"}
+            except Exception as e:
+                if "429" in str(e) or "rate_limit" in str(e).lower():
+                    wait = min(5 * (attempt + 1), 30)
+                    logger.warning(f"Rate limit hit. Sleeping {wait}s (attempt {attempt + 1}/8)")
+                    time.sleep(wait)
+                else:
+                    logger.error(f"Groq API error: {e}")
+                    return {"value": None, "confidence": 0.0, "needs_review": True, "notes": str(e)}
+        logger.error("Max retries exceeded for Groq API")
+        return {"value": None, "confidence": 0.0, "needs_review": True, "notes": "Rate limit exceeded"}
 
     def extract_field(
         self,
@@ -104,12 +112,16 @@ class Extractor:
         """
         prompt = EXTRACTION_PROMPT.format(
             field_name=field_name,
-            page_text=page_text[:6000],
+            page_text=page_text[:4000],
             source_url=source_url,
             university_name=university_name,
             country=country,
             currency=currency,
         )
+        # Small sleep between LLM calls to stay within TPM budget.
+        # 131k TPM / ~1200 tokens per call = ~109 calls/min capacity.
+        # 3s gap gives ~20 calls/min — well within budget with margin.
+        time.sleep(3)
         result = self._call_groq(prompt)
         logger.info(
             f"  [{field_name}] confidence={result.get('confidence', 0):.2f} "
@@ -200,23 +212,17 @@ class Extractor:
         )
         results["about_raw"] = about_raw
 
-        # Field 2 — Tuition Fees: extract from dedicated tuition page, then
-        # cross-validate against the about page. Universities sometimes list
-        # headline fee figures in their about/overview copy that differ from
-        # the detailed fee schedule — flagging this conflict is valuable signal.
-        tuition_primary = self.extract_field(
+        # Field 2 — Tuition Fees: extract from dedicated tuition page only.
+        # Cross-validation against the about page was removed because it doubles
+        # the API calls and the about page rarely contains exact fee figures —
+        # it just wastes rate-limited tokens and causes subsequent fields to 429.
+        tuition_raw = self.extract_field(
             "tuition_fees_all_levels",
             get_text("tuition"),
             get_url("tuition"),
             name, country, currency,
         )
-        tuition_secondary = self.extract_field(
-            "tuition_fees_all_levels",
-            get_text("about"),
-            get_url("about"),
-            name, country, currency,
-        )
-        results["tuition_raw"] = self._merge_sources(tuition_primary, tuition_secondary, field="tuition")
+        results["tuition_raw"] = tuition_raw
 
         # Field 3 — Living Costs: dedicated living page where available, fall back to tuition page
         # (many universities publish living cost estimates alongside tuition in one budget table)
@@ -241,42 +247,30 @@ class Extractor:
         # are in institutional overview pages, not fee or deadline pages)
         acceptance_raw = self.extract_field(
             "acceptance_rate_percentage",
-            get_text("about") or get_text("admissions"),
+            get_text("about") or get_text("deadlines"),
             get_url("about"),
             name, country, currency,
         )
         results["acceptance_raw"] = acceptance_raw
 
         # Field 6 — Graduate Employment: dedicated career outcomes page gives real employment
-        # stats. Previously fell back to about page which only has mission-statement prose.
-        employment_primary = self.extract_field(
+        # stats. No cross-validation — about page has mission prose, not stats.
+        employment_raw = self.extract_field(
             "graduate_employment_rate_within_6_months",
             get_text("employment"),
             get_url("employment"),
             name, country, currency,
         )
-        employment_secondary = self.extract_field(
-            "graduate_employment_rate_within_6_months",
-            get_text("about"),
-            get_url("about"),
-            name, country, currency,
-        )
-        results["employment_raw"] = self._merge_sources(employment_primary, employment_secondary, field="employment")
+        results["employment_raw"] = employment_raw
 
         # Field 7 — Average Salaries: same career outcomes page as employment
-        salary_primary = self.extract_field(
+        salary_raw = self.extract_field(
             "average_graduate_salaries_by_field",
             get_text("employment"),
             get_url("employment"),
             name, country, currency,
         )
-        salary_secondary = self.extract_field(
-            "average_graduate_salaries_by_field",
-            get_text("about"),
-            get_url("about"),
-            name, country, currency,
-        )
-        results["salary_raw"] = self._merge_sources(salary_primary, salary_secondary, field="salary")
+        results["salary_raw"] = salary_raw
 
         # Field 8 — Visa Policies: visa/immigration office page is the authoritative source
         visa_raw = self.extract_field(
@@ -287,22 +281,15 @@ class Extractor:
         )
         results["visa_raw"] = visa_raw
 
-        # Field 9 — Intake Deadlines: cross-validate deadlines page against scholarships page.
-        # Scholarship deadlines are often earlier than general application deadlines —
-        # a conflict here is not an error but an important distinction to flag for review.
-        deadlines_primary = self.extract_field(
+        # Field 9 — Intake Deadlines: extract from dedicated deadlines page only.
+        # Cross-validation against scholarships page removed to conserve API calls.
+        deadlines_raw = self.extract_field(
             "application_deadlines_per_intake",
             get_text("deadlines"),
             get_url("deadlines"),
             name, country, currency,
         )
-        deadlines_secondary = self.extract_field(
-            "application_deadlines_per_intake",
-            get_text("scholarships"),
-            get_url("scholarships"),
-            name, country, currency,
-        )
-        results["deadlines_raw"] = self._merge_sources(deadlines_primary, deadlines_secondary, field="deadlines")
+        results["deadlines_raw"] = deadlines_raw
 
         # Field 10 — Course Listings
         courses_raw = self.extract_field(
