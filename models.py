@@ -119,3 +119,4 @@ class UniversityData(BaseModel):
     courses: list[CourseListing] = []
     scrape_timestamp: str
     overall_confidence: float = 0.0
+
