@@ -1,6 +1,6 @@
 # University Intelligence Agent
 
-AI-powered scraping agent using **Groq LLM (llama-3.3-70b-versatile)** to build a structured,
+AI-powered scraping agent using **Groq LLM (llama-3.1-8b-instant)** to build a structured,
 validated database of university intelligence across 10 fields per university.
 
 ## Architecture
@@ -103,7 +103,7 @@ Then re-run `python agent.py`. No Python changes required.
 
 ## Design Decisions
 
-- **Groq `llama3-70b-8192`** at `temperature=0.0` — deterministic output ensures the same value is returned across re-runs, making the eval report reproducible. The 70B model was chosen over 8B for significantly better instruction-following (8B hallucinates values and ignores "return null if not found").
+- **Groq `llama-3.1-8b-instant`** at `temperature=0.0` — deterministic output ensures the same value is returned across re-runs. The 8B model was chosen for production use because Groq's free tier provides 131,072 tokens per minute (TPM) for 8B vs only 12,000 TPM for 70B models. This allows extracting all 10 fields smoothly without exhausting rate limits, while structured JSON validation prevents hallucination.
 - **Cross-validation** — tuition, deadlines, employment, and salary are extracted from two independent source pages and merged. Agreement boosts confidence by +0.1; conflicts are flagged with both values preserved in `notes` for human review.
 - **Confidence per field** (not per record) — granular confidence lets the eval report identify which specific fields need attention, not just which universities.
 - **Null over hallucination** — the system prompt explicitly instructs the LLM to return `null` if a field is not present. Missing data is honest; fabricated data is disqualifying.
