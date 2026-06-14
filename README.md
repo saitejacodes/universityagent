@@ -120,3 +120,4 @@ See `eval_report.md` for:
 - Per-field × per-university confidence scores
 - Ground truth verification table (manually verified sample)
 - Methodology: how confidence was computed, which fields were cross-validated, storage threshold rationale
+
