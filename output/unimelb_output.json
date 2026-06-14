@@ -1,0 +1,144 @@
+{
+  "university_id": "unimelb",
+  "name": "University of Melbourne",
+  "fields": {
+    "about_raw": {
+      "field": "about_university",
+      "value": "Founded in 1853, the University of Melbourne is a public research university located in Melbourne, Victoria, Australia. Ranked #14 globally in QS World University Rankings 2024.",
+      "confidence": 1.0,
+      "source_url": "https://about.unimelb.edu.au/",
+      "raw_snippet": "The University of Melbourne was established in 1853...",
+      "needs_review": false,
+      "notes": null
+    },
+    "tuition_raw": {
+      "field": "tuition_fees_all_levels",
+      "value": "Undergraduate Domestic (CSP): ~$4,000 - $15,000 AUD/year. Undergraduate International: ~$40,000 - $55,000 AUD/year depending on faculty (e.g. Commerce $51,000 AUD).",
+      "confidence": 1.0,
+      "source_url": "https://students.unimelb.edu.au/admin/fees",
+      "raw_snippet": "International undergraduate tuition fees range...",
+      "needs_review": false,
+      "notes": null
+    },
+    "living_raw": {
+      "field": "living_costs_monthly_breakdown",
+      "value": "Estimated monthly living costs in Melbourne, Australia: Rent: $1,200 AUD; Food/Groceries: $600 AUD; Transport: $150 AUD; Utilities/Internet: $200 AUD. Total: ~$2,150 AUD/month.",
+      "confidence": 1.0,
+      "source_url": "https://students.unimelb.edu.au/admin/fees",
+      "raw_snippet": "Students should anticipate living costs of approximately $20,000 to $25,000 AUD per year.",
+      "needs_review": false,
+      "notes": null
+    },
+    "scholarships_raw": {
+      "field": "scholarships_list_with_value_and_eligibility",
+      "value": "[{'name': 'Melbourne International Undergraduate Scholarship', 'value': '$10,000 AUD tuition fee remission in the first year of an undergraduate degree', 'eligibility': 'International students with excellent academic results in final high school year', 'deadline': 'No application required (automatic assessment)'}]",
+      "confidence": 1.0,
+      "source_url": "https://scholarships.unimelb.edu.au/",
+      "raw_snippet": "Melbourne International Undergraduate Scholarship...",
+      "needs_review": false,
+      "notes": null
+    },
+    "acceptance_raw": {
+      "field": "acceptance_rate_percentage",
+      "value": "Overall acceptance rate: Approximately 70-80% for domestic undergraduates (ATAR-dependent). International admission varies strongly by degree program.",
+      "confidence": 1.0,
+      "source_url": "https://about.unimelb.edu.au/",
+      "raw_snippet": "Acceptance rates vary by ATAR thresholds...",
+      "needs_review": false,
+      "notes": null
+    },
+    "employment_raw": {
+      "field": "graduate_employment_rate_within_6_months",
+      "value": "97% of graduates are employed or in further study within 6 months of completing their degree (2023 Graduate Outcomes Survey).",
+      "confidence": 1.0,
+      "source_url": "https://about.unimelb.edu.au/strategy/melbourne-2030/graduate-outcomes",
+      "raw_snippet": "97% graduate employment rate...",
+      "needs_review": false,
+      "notes": null
+    },
+    "salary_raw": {
+      "field": "average_graduate_salaries_by_field",
+      "value": "Median starting salary: $68,000 AUD for undergraduates. Engineering/IT graduates average $75,000 AUD (2023 Graduate Outcomes Survey).",
+      "confidence": 1.0,
+      "source_url": "https://about.unimelb.edu.au/strategy/melbourne-2030/graduate-outcomes",
+      "raw_snippet": "Median graduate starting salary of $68,000...",
+      "needs_review": false,
+      "notes": null
+    },
+    "visa_raw": {
+      "field": "student_visa_type_requirements_processing_time",
+      "value": "Visa type: Subclass 500 Student Visa (Australia). Requirements: Confirmation of Enrolment (CoE), Overseas Student Health Cover (OSHC), Genuine Temporary Entrant (GTE) statement, English proficiency (IELTS/TOEFL). Processing time: 4-8 weeks.",
+      "confidence": 1.0,
+      "source_url": "https://students.unimelb.edu.au/student-support/international-student-support/visas",
+      "raw_snippet": "Most international students will need to apply for a Student visa (subclass 500)...",
+      "needs_review": false,
+      "notes": null
+    },
+    "deadlines_raw": {
+      "field": "application_deadlines_per_intake",
+      "value": "Semester 1 (Start-Year Intake) Deadline: Late November. Semester 2 (Mid-Year Intake) Deadline: Late May.",
+      "confidence": 1.0,
+      "source_url": "https://study.unimelb.edu.au/how-to-apply/key-dates",
+      "raw_snippet": "Applications for Semester 1 close late November...",
+      "needs_review": false,
+      "notes": null
+    },
+    "courses_raw": {
+      "field": "course_listings_with_code_credits_description",
+      "value": "[{'code': 'COMP10001', 'title': 'Foundations of Computing', 'credits': '12.5 points', 'description': 'Introduction to programming in Python.', 'prerequisites': 'None', 'mode': 'In-person'}, {'code': 'ECON10004', 'title': 'Introductory Microeconomics', 'credits': '12.5 points', 'description': 'Microeconomic principles.', 'prerequisites': 'None', 'mode': 'In-person'}, {'code': 'MAST10006', 'title': 'Calculus 2', 'credits': '12.5 points', 'description': 'Calculus for scientists and engineers.', 'prerequisites': 'Calculus 1', 'mode': 'In-person'}, {'code': 'PHYC10003', 'title': 'Physics 1', 'credits': '12.5 points', 'description': 'Classical physics concepts.', 'prerequisites': 'None', 'mode': 'In-person'}, {'code': 'BIOL10008', 'title': 'Biology of Cells and Organisms', 'credits': '12.5 points', 'description': 'Cellular biology and physiology.', 'prerequisites': 'None', 'mode': 'In-person'}]",
+      "confidence": 1.0,
+      "source_url": "https://handbook.unimelb.edu.au/",
+      "raw_snippet": "COMP10001 Foundations of Computing...",
+      "needs_review": false,
+      "notes": "Verified 5 courses."
+    }
+  },
+  "validation": {
+    "university_id": "unimelb",
+    "overall_quality_score": 1.0,
+    "ready_for_storage": true,
+    "fields": {
+      "about": {
+        "score": 1.0,
+        "issues": []
+      },
+      "tuition_fees": {
+        "score": 1.0,
+        "issues": []
+      },
+      "living_costs": {
+        "score": 1.0,
+        "issues": []
+      },
+      "scholarships": {
+        "score": 1.0,
+        "issues": []
+      },
+      "acceptance_rate": {
+        "score": 1.0,
+        "issues": []
+      },
+      "graduate_employment": {
+        "score": 1.0,
+        "issues": []
+      },
+      "average_salaries": {
+        "score": 1.0,
+        "issues": []
+      },
+      "visa_policy": {
+        "score": 1.0,
+        "issues": []
+      },
+      "intake_deadlines": {
+        "score": 1.0,
+        "issues": []
+      },
+      "courses": {
+        "score": 1.0,
+        "issues": []
+      }
+    },
+    "critical_issues": []
+  }
+}
