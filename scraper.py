@@ -122,3 +122,4 @@ class Scraper:
             results[label] = await self.fetch(url)
             await asyncio.sleep(2)  # 2-second gap between requests per host
         return results
+
