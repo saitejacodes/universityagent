@@ -7,15 +7,15 @@ universities:
     currency: USD
     pages:
       about: https://web.mit.edu/aboutmit/
-      tuition: https://sfs.mit.edu/graduate-students/the-cost-of-attendance/annual-student-budget/
-      scholarships: https://mitsloan.mit.edu/mba/admissions/financial-aid-fellowships
+      tuition: https://sfs.mit.edu/undergraduate-students/the-cost-of-attendance/coa/
+      scholarships: https://sfs.mit.edu/undergraduate-students/types-of-aid/mit-scholarships-grants/
       courses: https://student.mit.edu/catalog/index.cgi
       deadlines: https://mitadmissions.org/apply/firstyear/dates-deadlines/
       visa: https://iso.mit.edu/immigration-topics/students/
       # Career outcomes page: aggregates employment rate + salary data by major/field
       employment: https://capd.mit.edu/explore-careers/career-outcomes/
       # Living costs are embedded in the cost-of-attendance budget — same page as tuition
-      living: https://sfs.mit.edu/graduate-students/the-cost-of-attendance/annual-student-budget/
+      living: https://sfs.mit.edu/undergraduate-students/the-cost-of-attendance/coa/
 
   - id: unimelb
     name: University of Melbourne
@@ -38,14 +38,13 @@ universities:
     country: Canada
     currency: CAD
     pages:
-      about: https://www.utoronto.ca/about-u-of-t
+      about: https://www.sgs.utoronto.ca/about/
       tuition: https://fees.utoronto.ca/
       scholarships: https://www.sgs.utoronto.ca/awards/
       courses: https://artsci.calendar.utoronto.ca/
-      deadlines: https://future.utoronto.ca/apply/deadlines/
-      visa: https://internationalstudents.utoronto.ca/immigration/
+      deadlines: https://www.sgs.utoronto.ca/future-students/admission-application-requirements/
+      visa: https://internationalexperience.utoronto.ca/
       # Graduate outcomes page: employment stats, salary ranges, alumni destinations
-      employment: https://future.utoronto.ca/why-u-of-t/graduate-outcomes/
+      employment: https://www.sgs.utoronto.ca/about/explore-our-data/career-outcomes/
       # Cost of living breakdown for prospective students
-      living: https://future.utoronto.ca/finances/cost-of-living/
-
+      living: https://future.utoronto.ca/finances/
