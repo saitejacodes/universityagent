@@ -171,3 +171,4 @@ class Evaluator:
         logger.info(f"Eval report written to {output_path}")
         print(f"\n✅ Eval report: {output_path}")
         print(f"   Overall confidence score: {overall:.2f}")
+
