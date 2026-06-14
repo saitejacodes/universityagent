@@ -1,0 +1,14 @@
+# Environment — never commit real API keys
+.env
+
+# Generated data — committed separately after a verified run
+data/
+output/
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# macOS noise
+.DS_Store
