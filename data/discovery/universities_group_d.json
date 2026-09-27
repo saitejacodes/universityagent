@@ -1,0 +1,541 @@
+[
+ {
+  "id": "edinburgh",
+  "name": "University of Edinburgh",
+  "country": "United Kingdom",
+  "currency": "GBP",
+  "pages": {
+   "facts": {
+    "url": "https://www.ed.ac.uk/about/our-history",
+    "probe": "ok",
+    "evidence": "Founded in 1583 by the Town Council, the University is the sixth oldest university in the UK and the oldest civic foundation in the"
+   },
+   "admissions_stats": {
+    "url": "https://study.ed.ac.uk/undergraduate/applying/selection/admissions-statistics",
+    "probe": "ok",
+    "evidence": "| 2024 | 65,583 | 30,766 | 47% | 7,203 | | 2025 | 68,862 | 36,195 | 53% |"
+   },
+   "tuition": {
+    "url": "https://study.ed.ac.uk/programmes/undergraduate-fees?programme_code=UTCMPSI&year=2027",
+    "probe": "js_only",
+    "evidence": null
+   },
+   "living_costs": {
+    "url": "https://study.ed.ac.uk/undergraduate/fees-funding/living-costs",
+    "probe": "ok",
+    "evidence": "For 2026-2027, we estimate that it will cost an average of £1,546 each month to live in Edinburgh as a single undergraduate student. This equates to £13,914 for a 39-week academic year and £18,552"
+   },
+   "scholarships": {
+    "url": "https://registryservices.ed.ac.uk/student-funding/undergraduate/international",
+    "probe": "ok",
+    "evidence": "- Asylum Seeker Scholarship - Global Talent Fund BIG Scholarships - Rosedale OSSD University of Edinburgh Scholarship ... - Edinburgh Global Undergraduate Maths Scholarships"
+   },
+   "deadlines": {
+    "url": "https://study.ed.ac.uk/undergraduate/applying/making-application/when-apply",
+    "probe": "ok",
+    "evidence": "| 15 October 2026 | Deadline for all applications to medicine and veterinary medicine. | | 13 January 2027 | UCAS equal consideration deadline."
+   },
+   "visa": {
+    "url": "https://www.gov.uk/student-visa",
+    "probe": "ok",
+    "evidence": "# Student visa # Overview You can apply for a Student visa to study in the UK if you’re 16 or over and you:"
+   },
+   "outcomes": {
+    "url": "https://blogs.ed.ac.uk/careersinformed/what-do-university-of-edinburgh-graduates-do/",
+    "probe": "ok",
+    "evidence": "The headlines for the class of 2018 are really positive. 85% of Edinburgh graduates were in a highly skilled or graduate level role or further study 15 months after graduation;"
+   }
+  },
+  "notes": "Cleaner fix confirmed: study.ed.ac.uk / registryservices / governance pages now return full markdown (living-costs 15.7k chars). FACTS: our-history gives founding 1583 and city (Edinburgh); no HTML page found with total enrollment (www.ed.ac.uk/about is 801 chars with no numbers; /about/facts-and-figures 404; governance-strategic-planning university-factsheet only links a PDF; Student Factsheet 2024/25 PDF fetches as md_chars=233k but is un-parsed binary, 0 hits for '49,640'). Public status not stated verbatim on probed pages. ADMISSIONS: table gives all-applicant offer rate by year (applications | offers | offer rate | acceptances): 2025 = 68,862 apps, 36,195 offers, 53%. TUITION: UG fees are programme-specific and rendered client-side; the degree-page fee link (study.ed.ac.uk/programmes/undergraduate-fees?programme_code=UTCMPSI&year=2027, BSc Computer Science) and registryservices.ed.ac.uk/tuition-fees/find/undergraduate/2026-2027/full-time-new-students both return ok but contain no £ amounts in static HTML (curl confirms no fee values) -> recorded js_only. International fees are fixed for the programme duration. LIVING COSTS: 2026-27 £1,546/month, £13,914 per 39-week year, £18,552 per full year. DEADLINE: 13 January 2027 (UCAS equal consideration, 6pm GMT per degree pages); 15 Oct 2026 for medicine/vet. OUTCOMES: only official figure found is an older careers blog (class of 2018: 85% highly skilled work/further study; 96.5% any employment/further study); careers.ed.ac.uk graduate-outcomes page has no percentages; the careers 'insight-into-our-students' URL redirects to an SSO login."
+ },
+ {
+  "id": "mcgill",
+  "name": "McGill University",
+  "country": "Canada",
+  "currency": "CAD",
+  "pages": {
+   "facts": {
+    "url": "https://www.mcgill.ca/about",
+    "probe": "ok",
+    "evidence": "International students from more than 150 countries make up nearly 30% of McGill's student body ... ## History  McGill is a public university, founded in 1821."
+   },
+   "admissions_stats": {
+    "url": "https://www.mcgill.ca/es/admissions-profile",
+    "probe": "ok",
+    "evidence": "| Applicants | 38,135 | 956 | 12,538 | | Offers | 18,132 | 714 | 5,024 | | Entering Class | 7,310 | 484 | 2,820 |"
+   },
+   "tuition": {
+    "url": "https://www.mcgill.ca/student-accounts/tuition-charges/fallwinter-term-tuition-and-fees/undergraduate-fees",
+    "probe": "js_only",
+    "evidence": null
+   },
+   "living_costs": {
+    "url": "https://www.mcgill.ca/internationalstudents/faqs/caq-faqs/new-students",
+    "probe": "ok",
+    "evidence": "At this time, Immigration Quebec expects single adult students to have **at least $24,617** to cover their living expenses (“basic needs”)."
+   },
+   "scholarships": {
+    "url": "https://www.mcgill.ca/studentaid/scholarships-aid/future-undergrads/entrance-scholarships",
+    "probe": "ok",
+    "evidence": "- **One-year Scholarships**, valued at $3,000 (non-renewable) - **Major Entrance Scholarships**, valued between $12,000 and $48,000 ($3,000 to $12,000 per annum renewable for up to 4 years"
+   },
+   "deadlines": {
+    "url": "https://www.mcgill.ca/importantdates/channels/event/application-deadline-fall-2027-admission-undergraduate-programs-applicants-studying-or-who-last-370820",
+    "probe": "ok",
+    "evidence": "Application deadline for Fall 2027 admission to undergraduate programs by applicants studying or who last studied in an overseas or U.S. high school ...  Friday, January 15, 2027"
+   },
+   "visa": {
+    "url": "https://www.mcgill.ca/internationalstudents/immigration-documents/documents/study-permit-application-guide/how-apply",
+    "probe": "ok",
+    "evidence": "## Complete the Application for a Study Permit Made Outside of Canada (IMM 1294) ... Your CAQ acts as your Provincial Attestation Letter (PAL)."
+   },
+   "outcomes": {
+    "url": "https://www.mcgill.ca/caps/publications/destinationsurvey",
+    "probe": "ok",
+    "evidence": "The vast majority (92%) of graduates are employed or pursuing further education ... 93% found their first job within 6 months of graduation"
+   }
+  },
+  "notes": "FACTS: /about gives public + founded 1821; city Montréal from address block (845 Sherbrooke Street West Montréal, Quebec). Enrollment NOT extractable: www.mcgill.ca/about/quickfacts static HTML contains '40,531 Total students [Fall 2025]' but the pipeline returns only 517 md chars because the tab container <div class=\"vertical-tabs__panes tab-content\" aria-hidden=\"true\"> is stripped by clean.py's //*[@aria-hidden='true'] rule (a cleaner bug like Edinburgh's; the active pane itself has aria-hidden=\"false\"). ADMISSIONS: Fall 2025 (Final) undergraduate/professional: 38,135 applicants, 18,132 offers (~47.5% offer rate, computed), 7,310 entering. TUITION: international UG tuition is only in a JS fee calculator (undergraduate-fees page, 1.7k md chars, no $ values in static HTML) and in PDFs (new_intl_ugrad_degree_students_admitted_2026-27_0.pdf) that the fetcher does not parse (316k chars of binary, 0 hits); tuition-fees-2026-27 page only describes the Guaranteed Tuition Model (fixed per-credit rate for program duration, other fees +~3%/yr) -> js_only. LIVING COSTS: only official figure is Immigration Quebec's minimum $24,617/yr for a single adult (CAQ proof of funds), not a McGill budget; gradapplicants cost-living page returned HTTP 403. SCHOLARSHIPS: centrally-administered entrance scholarships open to all applicants ($3,000 one-year; Major $12k-$48k; named examples on page: Prestige $10,000, Greville Smith $12,000, Schulich Leaders) but $12,000 awards restricted to Canadians/PRs. DEADLINE: 15 Jan 2027 for overseas/US-schooled applicants (undergraduate-admissions/apply/deadlines returns HTTP 403 Drupal access-denied, not a bot wall). VISA: Study Permit + Quebec CAQ (acts as PAL). OUTCOMES: CaPS Destination Survey (class of 2023, surveyed 2025, 11% response): 92% employed or in further education; no university-wide salary (Desautels BCom 2024-25: 90% placement, avg base $75,667)."
+ },
+ {
+  "id": "nus",
+  "name": "National University of Singapore",
+  "country": "Singapore",
+  "currency": "SGD",
+  "pages": {
+   "facts": {
+    "url": "https://www.nus.edu.sg/about/facts-and-figures",
+    "probe": "blocked",
+    "evidence": null
+   },
+   "admissions_stats": {
+    "url": null,
+    "probe": "not_found",
+    "evidence": null
+   },
+   "tuition": {
+    "url": "https://www.nus.edu.sg/registrar/administrative-policies-procedures/undergraduate/undergraduate-fees",
+    "probe": "blocked",
+    "evidence": null
+   },
+   "living_costs": {
+    "url": null,
+    "probe": "blocked",
+    "evidence": null
+   },
+   "scholarships": {
+    "url": null,
+    "probe": "blocked",
+    "evidence": null
+   },
+   "deadlines": {
+    "url": "https://www.nus.edu.sg/oam/admissions/undergraduate/international-qualifications",
+    "probe": "blocked",
+    "evidence": null
+   },
+   "visa": {
+    "url": "https://www.ica.gov.sg/reside/STP/apply",
+    "probe": "ok",
+    "evidence": "# Becoming a Student's Pass Holder  ---  Back to top  Overview  A foreigner who has been accepted by an educational institution to pu"
+   },
+   "outcomes": {
+    "url": "https://news.nus.edu.sg/nus-graduates-demonstrate-resilience-in-a-cautious-job-market/",
+    "probe": "ok",
+    "evidence": "Among NUS fresh graduates in the labour force, 89.8 per cent secured employment within six months ... The median gross monthly salary ... increased to S$4,746 in 2025"
+   }
+  },
+  "notes": "BOT WALL: every www.nus.edu.sg / nus.edu.sg URL probed (about, about/facts-and-figures, oam/admissions/undergraduate/international-qualifications, registrar/.../undergraduate-fees) returns HTTP 200 with a 212-byte Imperva/Incapsula JS challenge stub (<script src=\"/_Incapsula_Resource?...\">), which the pipeline labels outcome=js_only (md_chars 0-82); recorded as 'blocked'. Not bypassed. This host holds facts, fees (registrar PDFs), OAM living-cost/scholarship/deadline pages, so those are unavailable; scholarships/living-cost URLs left null because not probed beyond the confirmed wall. news.nus.edu.sg is NOT walled (ok). NUS does not publish an admit rate (not_found). Tuition hint from search only (unverified, not probe-confirmed): AY2026/27 non-subsidised UG fee e.g. S$41,800 (FASS) in a www.nus.edu.sg PDF. VISA: ICA Student's Pass (gov.sg). OUTCOMES: GES 2025 via NUS Newsroom: 89.8% employed within 6 months; mean S$5,193, median S$4,746 gross monthly (full-time permanent)."
+ },
+ {
+  "id": "ntu",
+  "name": "Nanyang Technological University",
+  "country": "Singapore",
+  "currency": "SGD",
+  "pages": {
+   "facts": {
+    "url": "https://www.ntu.edu.sg/about-us",
+    "probe": "ok",
+    "evidence": "Ranked amongst the world’s top universities, NTU has 40,700 undergraduate and postgraduate students in the Business, Computing & Data Science, Engineering, Humanities, Arts,"
+   },
+   "admissions_stats": {
+    "url": null,
+    "probe": "not_found",
+    "evidence": null
+   },
+   "tuition": {
+    "url": "https://www.ntu.edu.sg/admissions/undergraduate/financial-matters/tuition-fees/accepted-programme-offer-in-2026",
+    "probe": "ok",
+    "evidence": "| All Programmes (except for those listed below) | $ 8,300 | $ 11,600 | $ 18,050 | $ 21,400 | $ 40,600 | $ 36,350 |"
+   },
+   "living_costs": {
+    "url": "https://www.ntu.edu.sg/admissions/undergraduate/admission-guide/international-qualifications",
+    "probe": "ok",
+    "evidence": "| Accommodation (On-campus) | S$430 - S$860\\* | | Meals | S$450 - S$600 | | Transport, Books & Personal Expenses | S$250 - S$500 | | Total | S$1130 - S$1960 |"
+   },
+   "scholarships": {
+    "url": "https://www.ntu.edu.sg/admissions/undergraduate/scholarships/scholarship-opportunities/detail/nanyang-scholarship",
+    "probe": "ok",
+    "evidence": "# Nanyang Global Scholarship  Apply Now  The Nanyang Global Scholarship is awarded to outstanding freshmen pursuing undergraduate programmes"
+   },
+   "deadlines": {
+    "url": "https://www.ntu.edu.sg/admissions/undergraduate/admission-guide/international-qualifications",
+    "probe": "ok",
+    "evidence": "| American High School Diploma/ High School Diploma with AP (Advanced Placement) | Closed | 15 Oct 2026 - 19 Mar 2027 |"
+   },
+   "visa": {
+    "url": "https://www.ica.gov.sg/reside/STP/apply",
+    "probe": "ok",
+    "evidence": "# Becoming a Student's Pass Holder  ---  Back to top  Overview  A foreigner who has been accepted by an educational institution to pu"
+   },
+   "outcomes": {
+    "url": "https://www.ntu.edu.sg/news/detail/steady-employment-outcomes-for-ntu-class-of-2025",
+    "probe": "ok",
+    "evidence": "nine in 10 securing employment[1] within six months ... mean gross monthly salary of $4,812 ... Their median gross monthly salary was $4,550, compared to $4,500 in 2024."
+   }
+  },
+  "notes": "No bot wall on www.ntu.edu.sg. FACTS: about-us gives 40,700 UG+PG students (city Singapore); founding year is on https://www.ntu.edu.sg/about-us/history (probe ok: 'Inaugurated on 1 July 1991, Nanyang Technological University (NTU)...'; predecessor NTI 1981, Nanyang University 1955). Public/autonomous status not stated verbatim on probed pages. ADMISSIONS: NTU publishes no admit rate. TUITION (2026 intake, fixed for programme duration; columns SC | SPR | ASEAN IS | All Other IS (subsidised, with tuition grant + bond) | Non-subsidised Lab | Non-Lab): international (non-ASEAN) S$21,400 subsidised or S$40,600 (lab) / S$36,350 (non-lab) non-subsidised per year, incl. 9% GST; Business/Accountancy S$21,800 / S$45,600. LIVING: estimated monthly S$1,130-S$1,960 (on-campus accommodation). DEADLINES: vary by qualification on the international-qualifications page, application window opens 15 Oct 2026; closes 20 Jan 2027 (e.g., Australian Year 12, Canadian) or 19 Mar 2027 (US HS diploma/AP, French/European Bacc, Brunei A-level). SCHOLARSHIPS: the scholarship-opportunities listing is client-rendered (no names in markdown); detail pages work: Nanyang Global Scholarship (open to internationals, 3-yr bond under tuition grant) and ASEAN Undergraduate Scholarship (ASEAN citizens/PRs). VISA: ICA Student's Pass (NTU page also notes it assists Student's Pass applications). OUTCOMES: JAUGES 2025 via NTU news: ~9 in 10 employed within 6 months; mean S$4,812, median S$4,550 gross monthly."
+ },
+ {
+  "id": "anu",
+  "name": "Australian National University",
+  "country": "Australia",
+  "currency": "AUD",
+  "pages": {
+   "facts": {
+    "url": "https://www.anu.edu.au/about/facts-about-anu",
+    "probe": "ok",
+    "evidence": "Since 1946, we’ve been a national resource ... Students from across Australia and 100 countries  10,252 undergraduate students  7,128 postgraduate students  ## A university in the heart of Canberra"
+   },
+   "admissions_stats": {
+    "url": null,
+    "probe": "not_found",
+    "evidence": null
+   },
+   "tuition": {
+    "url": "https://programsandcourses.anu.edu.au/2027/program/AACOM",
+    "probe": "ok",
+    "evidence": "Annual indicative fee for international students :   $57,640.00"
+   },
+   "living_costs": {
+    "url": "https://www.anu.edu.au/students/program-administration/fees-payments/estimated-cost-of-living-in-canberra",
+    "probe": "ok",
+    "evidence": "To live on your own in Canberra, you will need approximately AU$33,000 - $39,000 a year to cover basic costs such as accommodation, food, utilities and clothing (approximately AU$634 - $750 per week)."
+   },
+   "scholarships": {
+    "url": "https://study.anu.edu.au/scholarships",
+    "probe": "ok",
+    "evidence": "#### ANU Vice-Chancellor’s International Achievement Award ... this scholarship welcomes academically talented international students with 20% off their first-year tuition"
+   },
+   "deadlines": {
+    "url": "https://study.anu.edu.au/apply/international-applications",
+    "probe": "ok",
+    "evidence": "Semester 1, 2027  ## **Key dates - overview**  - Applications are now open and will close on the **15 December 2026**."
+   },
+   "visa": {
+    "url": "https://study.anu.edu.au/apply/international-student-visa-requirements",
+    "probe": "ok",
+    "evidence": "hold a current visa which entitles you to study for the duration of your program. Typically this is a subclass 500 student visa."
+   },
+   "outcomes": {
+    "url": "https://study.anu.edu.au/explore-anu/stories/7-reasons-why-canberra-perfect-postgraduate-students",
+    "probe": "ok",
+    "evidence": "More than 90 per cent of graduates secure full-time employment within four months of finishing their degree (QILT, 2023), and national median salaries for ANU postgraduates sit between $91,000"
+   }
+  },
+  "notes": "No bot wall. FACTS: facts-about-anu gives founding 1946, Canberra, 10,252 UG + 7,128 PG (=17,380, computed); /about also states 'Founded in 1946'; /about/facts-figures is 404. Public status not stated verbatim. ADMISSIONS: no admit rate published (cohort-profile page is ATAR/domestic profile only). TUITION: fees are per program; Bachelor of Advanced Computing (Honours) 2027 entry A$57,640/yr (2026 page: A$56,120); unversioned programsandcourses URL currently shows 2027. LIVING: 2026 estimate A$33,000-39,000/yr (A$634-750/week), A$24,000-28,500 per academic year (Feb-Nov). SCHOLARSHIPS: hub lists ANU Vice-Chancellor's International Achievement Award (20% off first-year tuition, automatic); the ANU Chancellor's International Scholarship page (25% UG) probes ok but says 'currently unavailable'. DEADLINE: international applications for Semester 1 2027 close 15 Dec 2026 (Crawford School programs 31 Oct 2026; Semester 2 2026 closed 14 Jun 2026). VISA: subclass 500 student visa (immi.homeaffairs.gov.au student-500 returns only 400 md chars - JS-rendered; use ANU page). OUTCOMES: only university statement found is in a postgraduate-focused story (QILT 2023 >90% full-time employed within 4 months; PG median A$91k-108k); services.anu.edu.au GOS page has no figures; unistats GOS PDFs are 2016 and PDFs are not parsed. www.anu.edu.au/node/78213 (international FAQ) returned 403."
+ },
+ {
+  "id": "auckland",
+  "name": "University of Auckland",
+  "country": "New Zealand",
+  "currency": "NZD",
+  "pages": {
+   "facts": {
+    "url": "https://www.auckland.ac.nz/en/about-us.html",
+    "probe": "ok",
+    "evidence": "Founded in 1883, Auckland is the country’s largest university with over 40,000 students, nearly 10,000 of whom graduate annually."
+   },
+   "admissions_stats": {
+    "url": null,
+    "probe": "not_found",
+    "evidence": null
+   },
+   "tuition": {
+    "url": "https://www.auckland.ac.nz/en/study/fees-and-money-matters/tuition-fees/international-student-fees/undergraduate-international-fees.html",
+    "probe": "ok",
+    "evidence": "## 2026 fees  | Programme | Estimated fees | ... | Bachelor of Engineering (Honours) | NZ$58,009 | ... | Bachelor of Science | NZ$47,221 - NZ$58,009 |"
+   },
+   "living_costs": {
+    "url": "https://www.auckland.ac.nz/en/students/student-support/personal-support/international-student-support/visa-information/How-to-apply-for-a-student-visa/Student-visa-applications-for-new-students.html",
+    "probe": "ok",
+    "evidence": "requires you to show evidence that you can support yourself during your studies. You must have:  - NZD 20,000 per year, if you are studying for one academic year or more, or - NZD 1,667 for each month"
+   },
+   "scholarships": {
+    "url": "https://www.auckland.ac.nz/en/study/scholarships-and-awards/scholarship-types/scholarships-for-international-students/undergraduate-scholarships-for-international-students.html",
+    "probe": "ok",
+    "evidence": "# Undergraduate scholarships for international students  ## All faculties  ### University of Auckland International School Leaver Scholarship  #### All faculties  A Scholarship of up to $20,000 t"
+   },
+   "deadlines": {
+    "url": "https://www.auckland.ac.nz/en/study/applications-and-admissions/how-to-apply/undergraduate-application-closing-dates.html",
+    "probe": "ok",
+    "evidence": "## Semester One 2027 application closing dates  | Programme of study | Application closing date | | --- | --- | | **Arts and Education** |  | | Bachelor of Arts | 8 December 2026 |"
+   },
+   "visa": {
+    "url": "https://www.auckland.ac.nz/en/students/student-support/personal-support/international-student-support/visa-information/How-to-apply-for-a-student-visa/Student-visa-applications-for-new-students.html",
+    "probe": "ok",
+    "evidence": "Submit your visa application through the INZ portal  - Most students will apply under the Fee paying student visa category."
+   },
+   "outcomes": {
+    "url": "https://www.auckland.ac.nz/en/alumni/our-alumni/graduate-destination-survey.html",
+    "probe": "js_only",
+    "evidence": null
+   }
+  },
+  "notes": "No bot wall for the pipeline (plain curl gets HTTP 406, but PoliteFetcher gets 200). FACTS: about-us gives founded 1883, 'over 40,000 students' (city Auckland); public status not stated verbatim; /about-the-university/facts-and-figures.html is 404. ADMISSIONS: no admit rate published. TUITION: per-programme estimated annual international fees (120 points) for 2026 and 2027 on the same page: 2026 BE(Hons) NZ$58,009, BSc NZ$47,221-58,009, BCom NZ$48,133, BA NZ$40,225; 2027 BE(Hons) NZ$60,909.60; plus Student Services Fee (~NZ$1,108.80-1,132.80). LIVING: no university living-cost estimate in HTML (cost-of-living-auckland page lists only incidental costs e.g. '~$70 per week' entertainment; accommodation NZ$7,000-10,000 per semester on study-abroad costs page); recorded the Immigration NZ funds requirement quoted on the Auckland visa page: NZD 20,000/yr (NZD 1,667/month). SCHOLARSHIPS: University of Auckland International School Leaver Scholarship (up to NZ$20,000), plus International Student Excellence Scholarship (25% first-year tuition) on /study/international-students/scholarships-loans-and-funding/extensive-range-of-scholarships-available.html. DEADLINE: Semester One 2027 most UG programmes close 8 Dec 2026 (Nursing international 1 Nov 2026; MBChB/Optometry/Pharmacy 1 Jul 2026). VISA: Fee Paying Student Visa (INZ). OUTCOMES: Graduate Destination Survey page (ok, 16.5k chars) has no percentages in static markdown (employment rates 91.7%-97.5% seen only in search snippet, likely chart/JS or PDF) -> js_only; GDS PDFs not parsed by fetcher."
+ },
+ {
+  "id": "uq",
+  "name": "University of Queensland",
+  "country": "Australia",
+  "currency": "AUD",
+  "pages": {
+   "facts": {
+    "url": "https://about.uq.edu.au/profile-rankings",
+    "probe": "ok",
+    "evidence": "## Our community  ### 57,000+ students  Our undergraduate, non-award, postgraduate and research students are pursuing their goals."
+   },
+   "admissions_stats": {
+    "url": null,
+    "probe": "not_found",
+    "evidence": null
+   },
+   "tuition": {
+    "url": "https://study.uq.edu.au/study-options/programs/bachelor-computer-science-2559",
+    "probe": "ok",
+    "evidence": "Approximate yearly cost of tuition (16 units). Your fees will vary according to your study load. Fees are reviewed each year and may increase.  ### AUD $60,952  2027"
+   },
+   "living_costs": {
+    "url": "https://study.uq.edu.au/university-life/living-in-queensland/cost-living",
+    "probe": "ok",
+    "evidence": "| Public transport | From $23 | From $23 | From $71 | | **Total** | **$2,784–$4,327** | **$1,326**–**$3,739** | **$3,755**–**$5,461** |"
+   },
+   "scholarships": {
+    "url": "https://study.uq.edu.au/stories/discover-5-must-know-scholarships-international-students",
+    "probe": "ok",
+    "evidence": "## 1. UQ International Excellence Scholarship ... As a recipient, you will receive a 25% tuition fee reduction for the duration of your program. ... ## 2. UQ International High Achievers Scholarship"
+   },
+   "deadlines": {
+    "url": "https://study.uq.edu.au/admissions/undergraduate/submit-your-application",
+    "probe": "ok",
+    "evidence": "- QTAC applications open: 4 August 2026 - QTAC applications close for major offer round: 7 December 2026 - UQ offers released: between 1 October 2026 and 16 February 2027"
+   },
+   "visa": {
+    "url": "https://study.uq.edu.au/university-life/getting-prepared-to-come-to-australia/student-visas",
+    "probe": "ok",
+    "evidence": "international students who are accepted to study full-time at UQ will need to apply for a Student visa (subclass 500)."
+   },
+   "outcomes": {
+    "url": "https://study.uq.edu.au/stories/why-uq-world-top-50-university",
+    "probe": "ok",
+    "evidence": "80% of UQ's (undergraduate) graduates secured full-time employment 4-6 months after completing their studies, according to QILT's 2025 Graduate Outcomes Survey."
+   }
+  },
+  "notes": "No bot wall on study.uq.edu.au / about.uq.edu.au (support.future-students.uq.edu.au is robots_disallowed). FACTS: profile-rankings gives 57,000+ students (about.uq.edu.au/fast-facts redirects there); founding on https://about.uq.edu.au/profile-rankings/history (probe ok: 'Established through a 1909 Act of State Parliament ... officially founded on April 16, 1910'; teaching began 1911 in Brisbane). ADMISSIONS: no admit rate published. TUITION: Bachelor of Computer Science (2559) international indicative annual fee AUD $60,952 for 2027 (page also shows domestic CSP $8,355 for 2026; the domestic/international toggle is client-side but both amounts are in the markdown). LIVING: monthly cost table (columns: on-campus accommodation | off-campus | family); single student totals A$2,784-4,327 (on-campus) / A$1,326-3,739 per month; colleges A$633-958/week. SCHOLARSHIPS: UQ International Excellence Scholarship (25% tuition, 2027) and UQ International High Achievers Scholarship; also scholarships.uq.edu.au/scholarship/uq-international-excellence-scholarship probes ok. DEADLINE / CLEANER BUG: the pipeline sees the default DOMESTIC view (QTAC major round closes 7 Dec 2026). The international direct-application closing date ('Semester 1: 30 November of the previous year'; Semester 2: 31 May) IS in the static HTML of the same page, inside <div class=\"student-type-widget\" data-student-type=\"international\"> > collapsed accordion <div class=\"uq-accordion__content\" aria-hidden=\"true\">, which clean.py drops via //*[@aria-hidden='true'] (same root cause as McGill quickfacts). VISA: Student visa (subclass 500). OUTCOMES: 80% of UQ undergraduates in full-time employment 4-6 months after completion (QILT GOS 2025); no salary figure found in HTML (older figures are in annual-report PDFs)."
+ },
+ {
+  "id": "monash",
+  "name": "Monash University",
+  "country": "Australia",
+  "currency": "AUD",
+  "pages": {
+   "facts": {
+    "url": "https://www.monash.edu/about/who/facts-and-figures",
+    "probe": "blocked",
+    "evidence": null
+   },
+   "admissions_stats": {
+    "url": null,
+    "probe": "not_found",
+    "evidence": null
+   },
+   "tuition": {
+    "url": "https://www.monash.edu/study/fees-scholarships/fees",
+    "probe": "blocked",
+    "evidence": null
+   },
+   "living_costs": {
+    "url": null,
+    "probe": "blocked",
+    "evidence": null
+   },
+   "scholarships": {
+    "url": "https://www.monash.edu/study/fees-scholarships/scholarships",
+    "probe": "blocked",
+    "evidence": null
+   },
+   "deadlines": {
+    "url": null,
+    "probe": "blocked",
+    "evidence": null
+   },
+   "visa": {
+    "url": "https://www.studyaustralia.gov.au/en/plan-your-move/your-guide-to-visas",
+    "probe": "ok",
+    "evidence": "For students coming to Australia to study, the most common visa is the Student visa (subclass 500)."
+   },
+   "outcomes": {
+    "url": null,
+    "probe": "blocked",
+    "evidence": null
+   }
+  },
+  "notes": "BOT WALL: www.monash.edu (hosts all Monash study/about/fees/scholarship pages) returns HTTP 403 with 'cf-mitigated: challenge' / server: cloudflare (Cloudflare managed challenge) for the pipeline UA and for a browser UA via curl. Confirmed on /about, /about/who/facts-and-figures and /study/fees-scholarships/scholarships; not bypassed and not probed further. Search shows fees are per-course pages and a 2027 international UG course guide PDF on www.monash.edu (also walled; fetcher does not parse PDFs anyway). URLs recorded for blocked types are the canonical pages found via search (facts/fees/scholarships probed = 403); living_costs/deadlines/outcomes left null (same walled host, not individually probed). VISA: Study Australia (Australian Government) page confirms Student visa (subclass 500); immi.homeaffairs.gov.au student-500 page is JS-rendered (400 md chars) and /overview is 404. Monash does not publish an admit rate."
+ },
+ {
+  "id": "kuleuven",
+  "name": "KU Leuven",
+  "country": "Belgium",
+  "currency": "EUR",
+  "pages": {
+   "facts": {
+    "url": "https://www.kuleuven.be/english/about-kuleuven/facts-and-figures",
+    "probe": "ok",
+    "evidence": "Founded in **1425,** KU Leuven celebrated its 600th anniversary in 2025 ... with 26,8% of the university’s 66,306 students coming from outside of Belgium."
+   },
+   "admissions_stats": {
+    "url": null,
+    "probe": "not_found",
+    "evidence": null
+   },
+   "tuition": {
+    "url": "https://icts.kuleuven.be/apps/tuitionfees/",
+    "probe": "js_only",
+    "evidence": null
+   },
+   "living_costs": {
+    "url": "https://www.kuleuven.be/english/life-at-ku-leuven/money-matters/cost-of-living-in-belgium",
+    "probe": "ok",
+    "evidence": "# Cost of living in Belgium  To cover your living expenses in Belgium you will need around €1,050 to €1,400 per month."
+   },
+   "scholarships": {
+    "url": "https://www.kuleuven.be/scholarships/year/2026-2027/general-tuition-fee-waiver",
+    "probe": "ok",
+    "evidence": "| Degree type | - Bachelor's programmes - Master's programmes - Advanced Master's programmes | ... *info* The scholarship is available to all non-EEA students."
+   },
+   "deadlines": {
+    "url": "https://www.kuleuven.be/english/apply/application-instructions/apply-to-kuleuven",
+    "probe": "ok",
+    "evidence": "Several English-taught programmes have a fixed application deadline — check yours via the application window tool.  For Dutch-taught programmes, the deadline for non-EEA applicants is **1 February**."
+   },
+   "visa": {
+    "url": "https://www.kuleuven.be/english/life-at-ku-leuven/immigration-residence/long-stay-visa-type-d-visa-for-stays-longer-than-90-days",
+    "probe": "ok",
+    "evidence": "# Long-stay visa (type D) - for stays longer than 90 days  A long-stay visa (type D) is also called Authorisation for Provisional Sojourn"
+   },
+   "outcomes": {
+    "url": null,
+    "probe": "not_found",
+    "evidence": null
+   }
+  },
+  "notes": "No bot wall. FACTS: facts-and-figures (snapshot Sept 2026) gives founded 1425 and 66,306 students (26.8% from outside Belgium); city Leuven (history page: papal bull of 9 December 1425, Leuven); /about-kuleuven lists 64,476 students (older figure). Public status not stated verbatim. ADMISSIONS: no admit rate published (Flemish bachelor entry is largely open). TUITION: fee amounts only in the JS tuition-fee calculator (icts.kuleuven.be/apps/tuitionfees, 1.7k md chars, no amounts); /education/student/fees and fees/regulation pages have no euro amounts. Search snippet (not probe-confirmed) gives non-EEA 60-credit fee of EUR 9,493.90 for 2026-27, programme-dependent. LIVING: EUR 1,050-1,400/month (page body; meta description still says EUR 1,000-1,350). SCHOLARSHIPS: very few bachelor-level awards for internationals; scholarship database listing (/scholarships/year) is JS (488 chars). Recorded the General tuition fee waiver (bachelor-eligible, non-EEA, but conditional on residence-status criteria in Belgium); others found (Inspiring the Outstanding, Science@Leuven, ASEAN, Central/South America, Master Mind) are master's-only. DEADLINES: per-programme via application-window tool (www.kuleuven.be/application-windows timed out, error); general rule: Dutch-taught programmes non-EEA deadline 1 February; English-taught programmes have programme-specific deadlines. VISA: long-stay visa type D (then Belgian residence permit). OUTCOMES: only alumni-survey PDFs (master's graduates, 2018-19/2019-20: 85-87% employed after 1 year) - PDFs not parsed by fetcher, not probe-verified -> not_found."
+ },
+ {
+  "id": "hku",
+  "name": "University of Hong Kong",
+  "country": "Hong Kong SAR, China",
+  "currency": "HKD",
+  "pages": {
+   "facts": {
+    "url": "https://www.hku.hk/en/about-hku/history",
+    "probe": "ok",
+    "evidence": "1911  The University of Hong Kong is incorporated in Hong Kong as a self-governing body of scholars. ... 2025  HKU, which has grown to over 40,000 students, is named the top university in Asia by QS."
+   },
+   "admissions_stats": {
+    "url": null,
+    "probe": "not_found",
+    "evidence": null
+   },
+   "tuition": {
+    "url": "https://admissions.hku.hk/fees-and-scholarships/fees",
+    "probe": "ok",
+    "evidence": "Non-Local Students in 2027/28 Academic Year  |  |  | | --- | --- | | For STEM Faculties and Schools | HK$ 280,000 ... | For Non-STEM Faculties and Schools | HK$ 250,000"
+   },
+   "living_costs": {
+    "url": "https://admissions.hku.hk/fees-and-scholarships/fees",
+    "probe": "ok",
+    "evidence": "Residential halls and colleges  HKD17,290 to HKD37,940 per year ... Off-campus housing  HKD30,000 to HKD50,000 per year ... Living expenses  Up to HKD50,000 per year"
+   },
+   "scholarships": {
+    "url": "https://admissions.hku.hk/explore/news/university-of-hong-kong-offers-entrance-scholarships-international-students-realise",
+    "probe": "ok",
+    "evidence": "The HKU entrance scholarships may cover full tuition fees and accommodation and general living allowance. ... It was the HKU HeForShe IMPACT Champion Scholarship (HeforShe Scholarship)"
+   },
+   "deadlines": {
+    "url": "https://admissions.hku.hk/apply/international-qualifications",
+    "probe": "ok",
+    "evidence": "## Important Dates ... 23 Sept  2026  Start your application  25 Nov (noon)  2026  Submit your application for first-round evaluation"
+   },
+   "visa": {
+    "url": "https://www.immd.gov.hk/eng/services/visas/study.html",
+    "probe": "ok",
+    "evidence": "Visas / Entry PermitsStudents  ## Students ... An application for a visa/entry permit to enter the HKSAR for study may be favourably considered if :"
+   },
+   "outcomes": {
+    "url": "https://horizons.hku.hk/research-stories/strong-employer-confidence-in-hku-graduates/",
+    "probe": "ok",
+    "evidence": "a record-high average monthly gross salary of HK$33,492, a 4.7% year-on-year increase ... The employment rate of HKU graduates also reached 98.7%."
+   }
+  },
+  "notes": "No bot wall (www.hku.hk old .html URLs now redirect to /en/about-hku... paths). FACTS: history timeline gives incorporated 1911 (foundation stone 1910), Hong Kong, 'over 40,000 students' (2025); exact headcount on https://www.cpao.hku.hk/qstats/student-profiles (probe ok): 2025/2026 all levels 45,303 (UG 20,103; TPG 20,366; RPG 4,834). Public status not stated verbatim. ADMISSIONS: no overall admit rate published. TUITION: non-local UG 2027/28 HK$280,000/yr (STEM faculties: Engineering, Medicine except MBBS, Science, etc.) or HK$250,000/yr (non-STEM); local subsidised HK$49,500. LIVING (same page): halls HKD17,290-37,940/yr (285 days), off-campus housing HKD30,000-50,000/yr, living expenses up to HKD50,000/yr. SCHOLARSHIPS: admissions scholarships page is a JS finder (3.7k chars, no names); used the admissions news article on entrance scholarships for international students (names HKU HeForShe IMPACT Champion Scholarship; may cover full tuition + accommodation + living allowance); aas.hku.hk/for-ugstudies lists named schemes (AIA, D. H. Chen Foundation, HK Jockey Club, HSBC...) but those are mostly for current students. DEADLINE: international qualifications, 2027 entry: first-round deadline 25 Nov 2026 (noon HKT); later applications rolling; predicted grades by 1 Dec 2026. VISA: HK Immigration Department student visa/entry permit. OUTCOMES: GES 2024 (published 2025): average monthly gross salary HK$33,492, employment rate 98.7% (3,792 FT bachelor's grads, 83% response); cedars.hku.hk GES page is js_only (0 chars)."
+ },
+ {
+  "id": "iitb",
+  "name": "Indian Institute of Technology Bombay",
+  "country": "India",
+  "currency": "INR",
+  "pages": {
+   "facts": {
+    "url": "https://www.iitb.ac.in/about",
+    "probe": "ok",
+    "evidence": "In 1958, IIT Bombay was established as part of a government initiative ... IIT Bombay's campus covers 200 hectares in Powai, Mumbai."
+   },
+   "admissions_stats": {
+    "url": null,
+    "probe": "not_found",
+    "evidence": null
+   },
+   "tuition": {
+    "url": "https://acad.iitb.ac.in/details-fees-payable",
+    "probe": "ok",
+    "evidence": "FEES PAYABLE BY UG NEW ENTRANTS - 2026\\* ... **Foreign Nationals#** ... \\*Academic fees for the Autumn Semester 2026-27  1,34,150/-  34,150/-  3,34,150/-"
+   },
+   "living_costs": {
+    "url": "https://acad.iitb.ac.in/details-fees-payable",
+    "probe": "ok",
+    "evidence": "\\*Hostel fees for the Autumn Semester 2026-27  19,950/-  19,950/-  19,950/- ... Semester Mess Advance (to be paid separately)  22,500/-  22,500/-  22,500/-"
+   },
+   "scholarships": {
+    "url": null,
+    "probe": "not_found",
+    "evidence": null
+   },
+   "deadlines": {
+    "url": "https://jeeadv.ac.in/",
+    "probe": "ok",
+    "evidence": "#### Online Direct Registration for Foreign National Candidates and OCI/PIO (F) Candidates  ##### Online Direct Registration for JEE (Advanced) 2026 is now open for Foreign National Candidates"
+   },
+   "visa": {
+    "url": "https://www.ir.iitb.ac.in/",
+    "probe": "ok",
+    "evidence": "The Ministry of Home Affairs, GoI has introduced an e-Student visa system for Study in India applicants using their SII-ID 3. e-visa facility introduced by the Government of India for S-1, S-3"
+   },
+   "outcomes": {
+    "url": "https://campus.placements.iitb.ac.in/",
+    "probe": "js_only",
+    "evidence": null
+   }
+  },
+  "notes": "No bot wall on www.iitb.ac.in / acad.iitb.ac.in (ir.iitb.ac.in without www and placements.iitb.ac.in do not resolve; use www.ir.iitb.ac.in). FACTS: /about gives established 1958, Powai, Mumbai; /about-iit-bombay adds 1961 Act of Parliament 'Institutes of National Importance' (publicly funded); enrollment only on homepage https://www.iitb.ac.in/ (probe ok: 'Students  13,000+'). ADMISSIONS: UG entry via JEE (Advanced) + JoSAA; no admit rate published. TUITION: UG new entrants 2026 (JEE Advanced), Foreign Nationals column: academic fees Rs 3,34,150 per (Autumn) semester 2026-27 (~Rs 6.7 lakh/yr for two semesters, computed; 2025-26 was Rs 3,28,250/semester on /ug-new-entrants-fees); Indian GEN Rs 1,34,150. LIVING: no official living-cost estimate; only institute charges: hostel Rs 19,950/semester + mess advance Rs 22,500/semester (recorded as partial living cost). SCHOLARSHIPS: none found for international undergraduates; www.ir.iitb.ac.in/new-international-degree-students lists ICCR, Study in India (SII) and DIA scholarships but in the PG/PhD admission context -> not_found. DEADLINES: foreign nationals apply to B.Tech via direct registration for JEE (Advanced) on jeeadv.ac.in (official IIT-run exam site, not iitb.ac.in); 2026 cycle: direct registration for foreign/OCI-PIO(F) opened ~6 Apr 2026, JEE-Main-qualified registration 23 Apr-2 May 2026; 2027 dates not yet announced; acad.iitb.ac.in/admissions/international confirms UG admission for foreign nationals is once a year via JEE Advanced. VISA: Indian e-Student visa (S-1/S-3) via Study in India (SII-ID) per IIT Bombay International Relations homepage. OUTCOMES: campus.placements.iitb.ac.in is a JS app (0 chars) and placement reports are PDFs (placement_report_2023_24.pdf fetches as 337k chars of unparsed binary, 0 hits) -> js_only; search snippets (not probe-confirmed) cite 2023-24 B.Tech median ~INR 17.92 LPA."
+ }
+]
