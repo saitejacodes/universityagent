@@ -9,6 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v5
-      - run: uv venv --python ${{ matrix.python }} && uv pip install -e ".[dev]"
+      - run: uv venv --python ${{ matrix.python }} && uv pip install -e ".[dev,api]"
       - run: uv run ruff check src tests scripts && uv run ruff format --check src tests scripts
       - run: uv run pytest -q
