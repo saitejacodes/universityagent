@@ -1,14 +1,16 @@
-# Environment — never commit real API keys
+# secrets
 .env
 
-# Generated data — committed separately after a verified run
-data/
-output/
+# fetched page content stays local (copyright); only hashes, short evidence quotes and labels
+# are committed. `make crawl` regenerates snapshots.
+data/snapshots/
+data/*.db
+.cache/
 
-# Python bytecode
+# python
 __pycache__/
-*.pyc
-*.pyo
-
-# macOS noise
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
 .DS_Store

@@ -1,124 +1,109 @@
-# University Intelligence Agent
+# uniagent — university facts you can trust, with the receipts
 
-AI-powered scraping agent using **Groq LLM (llama-3.1-8b-instant)** to build a structured,
-validated database of university intelligence across 10 fields per university.
+[![ci](https://github.com/saitejacodes/universityagent/actions/workflows/ci.yml/badge.svg)](https://github.com/saitejacodes/universityagent/actions/workflows/ci.yml) ![python](https://img.shields.io/badge/python-3.11%20%7C%203.12-blue) ![license](https://img.shields.io/badge/license-MIT-green)
 
-## Architecture
+Crawls official university websites politely, extracts 12 typed facts per university (tuition,
+living costs, acceptance rate, deadlines, visa type, graduate outcomes, …) with a local LLM, and
+**keeps an answer only if the model can quote the page sentence it came from**. Every stored value
+carries its quote, URL and page-snapshot hash; every run is evaluated against gold labels.
 
+<!-- RESULTS:START -->
+### Results — 23 held-out universities, 223 facts, gold labels with evidence
+
+Same stored pages for every system; test universities were never looked at during development.
+
+| System | Precision | Recall | F1 [95% CI] | Hallucination rate [95% CI] | Wrong when it answers |
+|---|---|---|---|---|---|
+| ScrapeGraphAI (off-the-shelf, same model `qwen3:8b`) | 74.7 | 32.0 | 44.8 [34.2–54.0] | 25.0 [13.6–36.7] | 25.3 |
+| v1 approach (first 4k chars, no evidence check, `llama3.1:8b`) | 67.8 | 70.9 | 69.3 [60.0–77.7] | 60.4 [47.9–72.2] | 32.2 |
+| v1 approach, stronger model (`qwen3:8b`) | 73.2 | 74.9 | 74.0 [65.3–82.1] | 50.0 [37.0–62.2] | 26.8 |
+| + per-field retrieval over the whole page | 74.4 | **82.9** | 78.4 [71.4–84.5] | 54.2 [45.0–63.5] | 25.6 |
+| **+ evidence verification (uniagent v2)** | **83.4** | 74.9 | **78.9** [72.3–84.8] | **12.5** [5.1–19.0] | **16.6** |
+
+- **Hallucinations 60% → 12.5%** and wrong answers halved; v2 beats v1 (p = 0.002), the same model
+  without the v2 system (p = 0.035) and ScrapeGraphAI (p < 0.001) — paired bootstrap over universities.
+- **The trade-off is visible, not hidden:** verification rejects some correct answers (recall 82.9 → 74.9).
+- **Confidence means something:** answers that pass both evidence checks are right 88.7% of the time
+  (confidence 0.9); ECE 0.088. "Derived" answers (value not literally in the quote) are right 35.7%.
+- **Gold set:** 312 labels over 26 universities in 13 countries, every one with a verbatim quote
+  machine-checked against its snapshot; inter-annotator κ = 0.93; 20/20 re-checked on the live sites.
+
+Full report with per-field scores and every wrong answer: [EVAL_REPORT.md](EVAL_REPORT.md).
+<!-- RESULTS:END -->
+
+## Why v2
+
+v1 reported **confidence 1.00 for all 30 fields** — the model grading itself — plus a
+"ground truth" table where every value matched. It also sent only the first 4,000 characters of
+each page to the model, and its README claimed cross-source validation that the code had removed.
+v2 is rebuilt around one question: *how would we know if an answer is wrong?*
+
+## How it works
+
+```mermaid
+flowchart LR
+    Y[config/universities.yaml<br/>verified official URLs] --> C[Polite crawler<br/>robots.txt, per-host rate limit,<br/>ETag / If-Modified-Since]
+    C --> S[(Versioned snapshots<br/>HTML + Markdown + sha)]
+    S --> R[Per-field retrieval<br/>heading chunks + BM25]
+    R --> L[LLM: value + verbatim quote<br/>per field, JSON]
+    L --> V{Evidence check<br/>quote on page?<br/>value in quote?}
+    V -->|no| X[Rejected as hallucination]
+    V -->|yes| M[Merge across pages<br/>agreement bonus / conflict note]
+    M --> D[(SQLite: append-only facts<br/>with provenance)]
+    D --> API[Read-only API]
+    D --> E[Eval vs gold labels]
 ```
-agent.py (orchestrator)
-    ↓
-scraper.py   → fetches pages (robots.txt compliance, retry + exponential backoff)
-    ↓
-extractor.py → Groq LLM extracts 10 fields; key fields cross-validated from 2 sources
-    ↓
-validator.py → checks confidence, plausibility, currency match, date range
-    ↓
-database.py  → stores raw fields + typed Pydantic model dump to SQLite
-    ↓
-evaluator.py → generates eval_report.md with per-field × per-university breakdown
-```
 
-Each module has exactly one responsibility. No module calls another's internal methods.
-Adding a 4th university requires **zero Python code changes** — only a YAML block.
+| Piece | Decision | Evidence it matters |
+|---|---|---|
+| **Cleaning** (`fetch/clean.py`) | Convert the whole pruned `<body>` to Markdown (tables kept) instead of an article extractor | On facts.mit.edu, trafilatura kept 11.7k chars but dropped the founding year, enrollment *and* admit rate |
+| **Retrieval** (`extract/retrieve.py`) | Heading-aware chunks, tables never split from their header, BM25 per field, round-robin packing into a 7k-char budget | Facts below the first 4,000 chars were invisible to v1 |
+| **Evidence check** (`extract/grounding.py`) | Quote must fuzzy-match the page (≥ 90) and the normalised value must appear in the quote | On MIT the model answered "private" from memory; the page never says it, so it was rejected |
+| **Confidence** | Derived from the checks: 0.9 accepted on the field's home page, 0.8 on a fallback page, 0.5 when the value isn't literally in the quote (derived), dropped when the quote isn't on the page | Calibration (ECE, AUROC) is measured on the test set, not asserted |
+| **Typed fields** (`schema.py`) | Money = amount + ISO currency + period; dates = month/day; percentages; enums | Makes automatic, tolerance-aware scoring possible |
+| **Snapshots** (`fetch/snapshots.py`) | Content-hashed, history kept on change; extraction never touches the live web | Reproducible runs; a re-crawl with no changes makes the next extraction free (LLM cache) |
 
-## Requirements
+### Responsible crawling
 
-- **Python**: 3.11 or 3.12 recommended (3.13+ not yet supported by pydantic-core wheels)
-- **GROQ API key**: free tier available at https://console.groq.com — create an account, go to API Keys, generate a key. Free tier gives 14,400 tokens/minute which is sufficient for one full run.
+- robots.txt per host with RFC 9309 semantics (4xx → no rules, 5xx/unreachable → disallow all),
+  matched on the product token `uniagent`, `Crawl-delay` honoured;
+- honest User-Agent with a contact URL; no browser-fingerprint impersonation, no stealth mode;
+- bot challenges (Cloudflare "Just a moment…") are recorded as `blocked` — **never bypassed**;
+- one request at a time per host (≥ 2 s apart), different hosts in parallel;
+- conditional requests so unchanged pages cost a 304.
 
-## Setup
+Fetching uses [Scrapling](https://github.com/D4Vinci/Scrapling)'s plain `AsyncFetcher`
+(with its stealth options explicitly turned off) and its `DynamicFetcher` (headless Chromium) only
+for pages whose static HTML is an empty JavaScript shell.
+
+## Quick start
 
 ```bash
-git clone <repo>
-cd university-agent
-
-# Create a virtual environment (recommended)
-python3.12 -m venv .venv
-source .venv/bin/activate
-
-pip install -r requirements.txt
-
-# Copy the example env file and add your key
-cp .env.example .env
-# Edit .env and replace 'your_groq_api_key_here' with your real key
-
-python agent.py
+make install
+ollama pull qwen3:8b
+.venv/bin/uniagent crawl                                     # snapshots -> data/snapshots/
+.venv/bin/uniagent extract --preset full --think false       # -> runs/full-qwen3_8b/
+.venv/bin/uniagent show mit                                  # current facts with their quotes
+.venv/bin/uvicorn uniagent.api:app                           # GET /universities/mit
 ```
 
-## Output
+Add a university by adding a block to `config/universities.yaml` (verify each URL with
+`scripts/probe_url.py URL REGEX`); no code changes.
 
-After a successful run, you will find:
+## Evaluation
 
-```
-output/
-  mit_output.json        ← all 10 fields extracted for MIT, with confidence + source URLs
-  unimelb_output.json    ← same for University of Melbourne
-  utoronto_output.json   ← same for University of Toronto
-data/
-  universities.db        ← SQLite database with raw_fields, universities, validation_reports tables
-eval_report.md           ← per-field × per-university confidence table + ground truth verification section
+```bash
+make extract-all      # v1 baseline, v1 w/ stronger model, + retrieval, + evidence check
+make eval             # -> EVAL_REPORT.md (test split, CIs, per-field, calibration, every error)
+# off-the-shelf baseline (separate venv; see the script's docstring)
+PYTHONPATH=src ../baselines/.venv-sg/bin/python scripts/baseline_scrapegraph.py --model qwen3:8b
 ```
 
-### Sample output structure (truncated)
+Method, gold-label protocol and matching rules: [docs/EVALUATION.md](docs/EVALUATION.md).
 
-```json
-{
-  "university_id": "mit",
-  "name": "Massachusetts Institute of Technology",
-  "fields": {
-    "tuition_raw": {
-      "value": "$59,750 per year (graduate)",
-      "confidence": 0.95,
-      "source_url": "https://sfs.mit.edu/graduate-students/the-cost-of-attendance/annual-student-budget/",
-      "raw_snippet": "The total cost of attendance for graduate students is $59,750...",
-      "needs_review": false,
-      "notes": "Cross-validated: secondary source agrees. (https://web.mit.edu/aboutmit/)"
-    }
-  }
-}
-```
+## Tests
 
-## Add a University (Zero Code Changes)
-
-Edit `config/universities.yaml` and add a new block:
-
-```yaml
-- id: oxford
-  name: University of Oxford
-  country: UK
-  currency: GBP
-  pages:
-    about: https://www.ox.ac.uk/about
-    tuition: https://www.ox.ac.uk/admissions/graduate/fees-and-funding
-    scholarships: https://www.ox.ac.uk/admissions/graduate/fees-and-funding/scholarships
-    courses: https://www.ox.ac.uk/admissions/graduate/courses
-    deadlines: https://www.ox.ac.uk/admissions/graduate/applying-to-oxford/when-to-apply
-    visa: https://www.ox.ac.uk/students/visa
-    employment: https://www.careers.ox.ac.uk/career-outcomes
-    living: https://www.ox.ac.uk/students/life/accommodation
-```
-
-Then re-run `python agent.py`. No Python changes required.
-
-## Design Decisions
-
-- **Groq `llama-3.1-8b-instant`** at `temperature=0.0` — deterministic output ensures the same value is returned across re-runs. The 8B model was chosen for production use because Groq's free tier provides 131,072 tokens per minute (TPM) for 8B vs only 12,000 TPM for 70B models. This allows extracting all 10 fields smoothly without exhausting rate limits, while structured JSON validation prevents hallucination.
-- **Cross-validation** — tuition, deadlines, employment, and salary are extracted from two independent source pages and merged. Agreement boosts confidence by +0.1; conflicts are flagged with both values preserved in `notes` for human review.
-- **Confidence per field** (not per record) — granular confidence lets the eval report identify which specific fields need attention, not just which universities.
-- **Null over hallucination** — the system prompt explicitly instructs the LLM to return `null` if a field is not present. Missing data is honest; fabricated data is disqualifying.
-- **robots.txt respected** — checked per domain (not per URL) before any HTTP request. Domain-level caching avoids one redundant HTTP round-trip per page fetch.
-- **Sequential scraping** — pages fetched sequentially with a 2-second gap, not concurrently. Concurrent fetches to the same domain trigger WAF rate-limiting and IP bans.
-- **Shared `aiohttp.ClientSession`** — one session created and reused for all fetches, then closed in a `finally` block. Creating a new session per request wastes one TCP + SSL handshake per URL.
-- **Partial saves** — the pipeline continues to the next university if one fails. Partial data is still written to the DB and output JSON.
-- **SQLite** for zero-dependency portability — no Postgres/MySQL server required.
-
-## Eval
-
-See `eval_report.md` for:
-
-- Per-field × per-university confidence scores
-- Ground truth verification table (manually verified sample)
-- Methodology: how confidence was computed, which fields were cross-validated, storage threshold rationale
-
-
+`pytest` runs 30+ tests with no network: fetch policy (robots rules, RFC 9309 status handling,
+challenge detection, 304s) against a fake transport, cleaning, chunking/retrieval, normalisation
+of money/dates/percentages, evidence verification, matching rules, metrics, and an end-to-end
+extraction from a stored snapshot with a scripted LLM.
