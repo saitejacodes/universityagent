@@ -1,0 +1,2710 @@
+[
+ {
+  "university": "mit",
+  "field": "founding_year",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "mit",
+  "field": "city",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "mit",
+  "field": "institution_type",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "mit",
+  "field": "total_enrollment",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "mit",
+  "field": "acceptance_rate",
+  "value": 4.6,
+  "raw_value": 4.6,
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "admissions_stats"
+ },
+ {
+  "university": "mit",
+  "field": "intl_undergrad_tuition",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "mit",
+  "field": "living_cost",
+  "value": {
+   "amount": 14090.0,
+   "currency": "USD",
+   "period": "year"
+  },
+  "raw_value": {
+   "amount": 14090,
+   "currency": "USD",
+   "period": "per year"
+  },
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "living_costs"
+ },
+ {
+  "university": "mit",
+  "field": "application_deadline",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "deadlines"
+ },
+ {
+  "university": "mit",
+  "field": "student_visa",
+  "value": "F-1",
+  "raw_value": "F-1",
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "visa"
+ },
+ {
+  "university": "mit",
+  "field": "employment_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "mit",
+  "field": "median_salary",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "mit",
+  "field": "scholarships",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "scholarships"
+ },
+ {
+  "university": "stanford",
+  "field": "founding_year",
+  "value": 1885,
+  "raw_value": 1885,
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "stanford",
+  "field": "city",
+  "value": "Stanford",
+  "raw_value": "Stanford",
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "stanford",
+  "field": "institution_type",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "stanford",
+  "field": "total_enrollment",
+  "value": 17314,
+  "raw_value": 17314,
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "stanford",
+  "field": "acceptance_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "stanford",
+  "field": "intl_undergrad_tuition",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "stanford",
+  "field": "living_cost",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "stanford",
+  "field": "application_deadline",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "deadlines"
+ },
+ {
+  "university": "stanford",
+  "field": "student_visa",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "visa"
+ },
+ {
+  "university": "stanford",
+  "field": "employment_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "stanford",
+  "field": "median_salary",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "stanford",
+  "field": "scholarships",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "scholarships"
+ },
+ {
+  "university": "berkeley",
+  "field": "founding_year",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "berkeley",
+  "field": "city",
+  "value": "Berkeley",
+  "raw_value": "Berkeley",
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "berkeley",
+  "field": "institution_type",
+  "value": "public",
+  "raw_value": "public",
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "berkeley",
+  "field": "total_enrollment",
+  "value": 46151,
+  "raw_value": 46151,
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "berkeley",
+  "field": "acceptance_rate",
+  "value": 11.39,
+  "raw_value": 11.39,
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "admissions_stats"
+ },
+ {
+  "university": "berkeley",
+  "field": "intl_undergrad_tuition",
+  "value": {
+   "amount": 37602.0,
+   "currency": "USD",
+   "period": "year"
+  },
+  "raw_value": {
+   "amount": 37602,
+   "period": "year",
+   "currency": "USD",
+   "note": "Non-Resident Supplemental Tuition for undergraduates. Professional schools (e.g., Law, Medicine) have separate fees."
+  },
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "tuition"
+ },
+ {
+  "university": "berkeley",
+  "field": "living_cost",
+  "value": {
+   "amount": 21600.0,
+   "currency": "USD",
+   "period": "year"
+  },
+  "raw_value": {
+   "amount": 21600,
+   "period": "year",
+   "currency": "USD",
+   "note": "Includes housing, meals, books & supplies, and personal expenses. Average estimate based on $2,400/month."
+  },
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "tuition"
+ },
+ {
+  "university": "berkeley",
+  "field": "application_deadline",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "deadlines"
+ },
+ {
+  "university": "berkeley",
+  "field": "student_visa",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "visa"
+ },
+ {
+  "university": "berkeley",
+  "field": "employment_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "berkeley",
+  "field": "median_salary",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "berkeley",
+  "field": "scholarships",
+  "value": [
+   "Undergraduate Tuition and Fees Grant (_Fall & Spring_)",
+   "Need & Merit-Based Scholarships (_Fall only_)"
+  ],
+  "raw_value": [
+   "Undergraduate Tuition and Fees Grant (_Fall & Spring_)",
+   "Need & Merit-Based Scholarships (_Fall only_)"
+  ],
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "scholarships"
+ },
+ {
+  "university": "gatech",
+  "field": "founding_year",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "gatech",
+  "field": "city",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "gatech",
+  "field": "institution_type",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "gatech",
+  "field": "total_enrollment",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "gatech",
+  "field": "acceptance_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "gatech",
+  "field": "intl_undergrad_tuition",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "gatech",
+  "field": "living_cost",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "gatech",
+  "field": "application_deadline",
+  "value": {
+   "month": 1,
+   "day": 6,
+   "year": null
+  },
+  "raw_value": "January 6",
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "deadlines"
+ },
+ {
+  "university": "gatech",
+  "field": "student_visa",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "visa"
+ },
+ {
+  "university": "gatech",
+  "field": "employment_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "gatech",
+  "field": "median_salary",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "gatech",
+  "field": "scholarships",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "cmu",
+  "field": "founding_year",
+  "value": 1901,
+  "raw_value": 1901,
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "cmu",
+  "field": "city",
+  "value": "Pittsburgh",
+  "raw_value": "Pittsburgh",
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "cmu",
+  "field": "institution_type",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "cmu",
+  "field": "total_enrollment",
+  "value": 16582,
+  "raw_value": 16582,
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "cmu",
+  "field": "acceptance_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "cmu",
+  "field": "intl_undergrad_tuition",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "cmu",
+  "field": "living_cost",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "cmu",
+  "field": "application_deadline",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "deadlines"
+ },
+ {
+  "university": "cmu",
+  "field": "student_visa",
+  "value": "F-1",
+  "raw_value": "F-1",
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "visa"
+ },
+ {
+  "university": "cmu",
+  "field": "employment_rate",
+  "value": 91.0,
+  "raw_value": 91,
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "outcomes"
+ },
+ {
+  "university": "cmu",
+  "field": "median_salary",
+  "value": {
+   "amount": 116882.0,
+   "currency": "USD",
+   "period": "year"
+  },
+  "raw_value": {
+   "amount": 116882,
+   "currency": "USD",
+   "period": "year"
+  },
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "outcomes"
+ },
+ {
+  "university": "cmu",
+  "field": "scholarships",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "utoronto",
+  "field": "founding_year",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "utoronto",
+  "field": "city",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "utoronto",
+  "field": "institution_type",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "utoronto",
+  "field": "total_enrollment",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "utoronto",
+  "field": "acceptance_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "utoronto",
+  "field": "intl_undergrad_tuition",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "utoronto",
+  "field": "living_cost",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "utoronto",
+  "field": "application_deadline",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "deadlines"
+ },
+ {
+  "university": "utoronto",
+  "field": "student_visa",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "visa"
+ },
+ {
+  "university": "utoronto",
+  "field": "employment_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "utoronto",
+  "field": "median_salary",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "utoronto",
+  "field": "scholarships",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "scholarships"
+ },
+ {
+  "university": "ubc",
+  "field": "founding_year",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "ubc",
+  "field": "city",
+  "value": "Vancouver",
+  "raw_value": "Vancouver",
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "ubc",
+  "field": "institution_type",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "ubc",
+  "field": "total_enrollment",
+  "value": 72100,
+  "raw_value": 72100,
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "ubc",
+  "field": "acceptance_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "ubc",
+  "field": "intl_undergrad_tuition",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "ubc",
+  "field": "living_cost",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "ubc",
+  "field": "application_deadline",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "deadlines"
+ },
+ {
+  "university": "ubc",
+  "field": "student_visa",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "visa"
+ },
+ {
+  "university": "ubc",
+  "field": "employment_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "ubc",
+  "field": "median_salary",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "ubc",
+  "field": "scholarships",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "imperial",
+  "field": "founding_year",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "imperial",
+  "field": "city",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "imperial",
+  "field": "institution_type",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "imperial",
+  "field": "total_enrollment",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "imperial",
+  "field": "acceptance_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "imperial",
+  "field": "intl_undergrad_tuition",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "imperial",
+  "field": "living_cost",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "imperial",
+  "field": "application_deadline",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "deadlines"
+ },
+ {
+  "university": "imperial",
+  "field": "student_visa",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "visa"
+ },
+ {
+  "university": "imperial",
+  "field": "employment_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "outcomes"
+ },
+ {
+  "university": "imperial",
+  "field": "median_salary",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "outcomes"
+ },
+ {
+  "university": "imperial",
+  "field": "scholarships",
+  "value": [
+   "IB Excellence scholarships"
+  ],
+  "raw_value": [
+   "IB Excellence scholarships"
+  ],
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "scholarships"
+ },
+ {
+  "university": "tum",
+  "field": "founding_year",
+  "value": 1861,
+  "raw_value": 1861,
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "tum",
+  "field": "city",
+  "value": "Munich",
+  "raw_value": "Munich",
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "tum",
+  "field": "institution_type",
+  "value": "public",
+  "raw_value": "public",
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "tum",
+  "field": "total_enrollment",
+  "value": 55000,
+  "raw_value": 55000,
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "tum",
+  "field": "acceptance_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "tum",
+  "field": "intl_undergrad_tuition",
+  "value": {
+   "amount": 3000.0,
+   "currency": "EUR",
+   "period": "term"
+  },
+  "raw_value": {
+   "amount": 3000,
+   "currency": "EUR",
+   "period": "term",
+   "note": "Varies by program; typical range is 2,000\u20133,000 euros per semester."
+  },
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "tuition"
+ },
+ {
+  "university": "tum",
+  "field": "living_cost",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "tum",
+  "field": "application_deadline",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "deadlines"
+ },
+ {
+  "university": "tum",
+  "field": "student_visa",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "visa"
+ },
+ {
+  "university": "tum",
+  "field": "employment_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "tum",
+  "field": "median_salary",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "tum",
+  "field": "scholarships",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "scholarships"
+ },
+ {
+  "university": "ethz",
+  "field": "founding_year",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "ethz",
+  "field": "city",
+  "value": "NA",
+  "raw_value": "NA",
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "ethz",
+  "field": "institution_type",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "ethz",
+  "field": "total_enrollment",
+  "value": 26942,
+  "raw_value": 26942,
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "ethz",
+  "field": "acceptance_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "ethz",
+  "field": "intl_undergrad_tuition",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "ethz",
+  "field": "living_cost",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "ethz",
+  "field": "application_deadline",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "deadlines"
+ },
+ {
+  "university": "ethz",
+  "field": "student_visa",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "visa"
+ },
+ {
+  "university": "ethz",
+  "field": "employment_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "ethz",
+  "field": "median_salary",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "ethz",
+  "field": "scholarships",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "scholarships"
+ },
+ {
+  "university": "tudelft",
+  "field": "founding_year",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "tudelft",
+  "field": "city",
+  "value": "Delft",
+  "raw_value": "Delft",
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "tudelft",
+  "field": "institution_type",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "tudelft",
+  "field": "total_enrollment",
+  "value": 26000,
+  "raw_value": 26000,
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "tudelft",
+  "field": "acceptance_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "tudelft",
+  "field": "intl_undergrad_tuition",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "tudelft",
+  "field": "living_cost",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "tudelft",
+  "field": "application_deadline",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "deadlines"
+ },
+ {
+  "university": "tudelft",
+  "field": "student_visa",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "visa"
+ },
+ {
+  "university": "tudelft",
+  "field": "employment_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "tudelft",
+  "field": "median_salary",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "tudelft",
+  "field": "scholarships",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "tcd",
+  "field": "founding_year",
+  "value": 1592,
+  "raw_value": 1592,
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "tcd",
+  "field": "city",
+  "value": "Dublin",
+  "raw_value": "Dublin",
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "tcd",
+  "field": "institution_type",
+  "value": "public",
+  "raw_value": "public",
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "tcd",
+  "field": "total_enrollment",
+  "value": 22000,
+  "raw_value": 22000,
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "tcd",
+  "field": "acceptance_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "tcd",
+  "field": "intl_undergrad_tuition",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "tcd",
+  "field": "living_cost",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "tcd",
+  "field": "application_deadline",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "deadlines"
+ },
+ {
+  "university": "tcd",
+  "field": "student_visa",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "visa"
+ },
+ {
+  "university": "tcd",
+  "field": "employment_rate",
+  "value": 92.5,
+  "raw_value": 92.5,
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "outcomes"
+ },
+ {
+  "university": "tcd",
+  "field": "median_salary",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "outcomes"
+ },
+ {
+  "university": "tcd",
+  "field": "scholarships",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "scholarships"
+ },
+ {
+  "university": "unsw",
+  "field": "founding_year",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "unsw",
+  "field": "city",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "unsw",
+  "field": "institution_type",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "unsw",
+  "field": "total_enrollment",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "unsw",
+  "field": "acceptance_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "unsw",
+  "field": "intl_undergrad_tuition",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "unsw",
+  "field": "living_cost",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "unsw",
+  "field": "application_deadline",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "deadlines"
+ },
+ {
+  "university": "unsw",
+  "field": "student_visa",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "visa"
+ },
+ {
+  "university": "unsw",
+  "field": "employment_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "unsw",
+  "field": "median_salary",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "unsw",
+  "field": "scholarships",
+  "value": [
+   "{'domestic': [{'name': 'UNSW Scientia Scholarship', 'description': 'For high-achieving domestic students with a high ATAR or equivalent. Full tuition fees and living expenses for up to 4 years.', 'link': 'https://www.unsw.edu.au/scholarships/scholarships-for-domestic-students'}, {'name': 'UNSW Rural and Regional Enterprise Scholarship', 'description': 'For domestic students from rural or regional NSW who are studying in areas with high regional employment demand.', 'link': 'https://www.unsw.edu.au/scholarships/scholarships-for-domestic-students'}, {'name': 'UNSW College Award', 'description': 'For domestic students who have completed a UNSW College program and are now enrolled in an undergraduate degree.', 'link': 'https://www.unsw.edu.au/scholarships/scholarships-for-domestic-students'}, {'name': 'UNSW Indigenous Scholarship', 'description': 'For domestic Aboriginal and Torres Strait Islander students. Full tuition fees and living expenses for up to 4 years.', 'link': 'https://www.unsw.edu.au/scholarships/scholarships-for-domestic-students'}], 'international': [{'name': 'UNSW International Scientia Coursework Scholarship', 'description': 'For high-achieving international students. Full tuition fees and living expenses for up to 4 years.', 'link': 'https://www.unsw.edu.au/scholarships/scholarships-for-international-students'}, {' ': \"Australia's Global University Award\", 'description': 'For international students with outstanding academic achievement. Full tuition fees and living expenses for up to 4 years.', 'link': 'https://www.unsw.edu.au/scholarships/scholarships-for-international-students'}, {'name': 'UNSW International Student Award', 'description': 'For international students with high academic achievement. Full tuition fees and living expenses for up to 4 years.', 'link': 'https://www.unsw.edu.au/scholarships/scholarships-for-international-students'}, {'name': 'UNSW International Rural and Regional Enterprise Scholarship', 'description': 'For international students from rural or regional NSW who are studying in areas with high regional employment demand.', 'link': 'https://www.unsw.edu.au/scholarships/scholarships-for-international-students'}]}"
+  ],
+  "raw_value": {
+   "domestic": [
+    {
+     "name": "UNSW Scientia Scholarship",
+     "description": "For high-achieving domestic students with a high ATAR or equivalent. Full tuition fees and living expenses for up to 4 years.",
+     "link": "https://www.unsw.edu.au/scholarships/scholarships-for-domestic-students"
+    },
+    {
+     "name": "UNSW Rural and Regional Enterprise Scholarship",
+     "description": "For domestic students from rural or regional NSW who are studying in areas with high regional employment demand.",
+     "link": "https://www.unsw.edu.au/scholarships/scholarships-for-domestic-students"
+    },
+    {
+     "name": "UNSW College Award",
+     "description": "For domestic students who have completed a UNSW College program and are now enrolled in an undergraduate degree.",
+     "link": "https://www.unsw.edu.au/scholarships/scholarships-for-domestic-students"
+    },
+    {
+     "name": "UNSW Indigenous Scholarship",
+     "description": "For domestic Aboriginal and Torres Strait Islander students. Full tuition fees and living expenses for up to 4 years.",
+     "link": "https://www.unsw.edu.au/scholarships/scholarships-for-domestic-students"
+    }
+   ],
+   "international": [
+    {
+     "name": "UNSW International Scientia Coursework Scholarship",
+     "description": "For high-achieving international students. Full tuition fees and living expenses for up to 4 years.",
+     "link": "https://www.unsw.edu.au/scholarships/scholarships-for-international-students"
+    },
+    {
+     " ": "Australia's Global University Award",
+     "description": "For international students with outstanding academic achievement. Full tuition fees and living expenses for up to 4 years.",
+     "link": "https://www.unsw.edu.au/scholarships/scholarships-for-international-students"
+    },
+    {
+     "name": "UNSW International Student Award",
+     "description": "For international students with high academic achievement. Full tuition fees and living expenses for up to 4 years.",
+     "link": "https://www.unsw.edu.au/scholarships/scholarships-for-international-students"
+    },
+    {
+     "name": "UNSW International Rural and Regional Enterprise Scholarship",
+     "description": "For international students from rural or regional NSW who are studying in areas with high regional employment demand.",
+     "link": "https://www.unsw.edu.au/scholarships/scholarships-for-international-students"
+    }
+   ]
+  },
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "scholarships"
+ },
+ {
+  "university": "uw",
+  "field": "founding_year",
+  "value": 1861,
+  "raw_value": 1861,
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "uw",
+  "field": "city",
+  "value": "Seattle",
+  "raw_value": "Seattle",
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "uw",
+  "field": "institution_type",
+  "value": "public",
+  "raw_value": "public university",
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "uw",
+  "field": "total_enrollment",
+  "value": 60000,
+  "raw_value": "more than 60,000",
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "uw",
+  "field": "acceptance_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "admissions_stats"
+ },
+ {
+  "university": "uw",
+  "field": "intl_undergrad_tuition",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "uw",
+  "field": "living_cost",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "uw",
+  "field": "application_deadline",
+  "value": {
+   "month": 11,
+   "day": 15,
+   "year": null
+  },
+  "raw_value": "November 15",
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "deadlines"
+ },
+ {
+  "university": "uw",
+  "field": "student_visa",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "visa"
+ },
+ {
+  "university": "uw",
+  "field": "employment_rate",
+  "value": 85.0,
+  "raw_value": 85,
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "outcomes"
+ },
+ {
+  "university": "uw",
+  "field": "median_salary",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "outcomes"
+ },
+ {
+  "university": "uw",
+  "field": "scholarships",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "uiuc",
+  "field": "founding_year",
+  "value": 1867,
+  "raw_value": 1867,
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "uiuc",
+  "field": "city",
+  "value": "Urbana-Champaign",
+  "raw_value": "Urbana-Champaign",
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "uiuc",
+  "field": "institution_type",
+  "value": "public",
+  "raw_value": "public",
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "uiuc",
+  "field": "total_enrollment",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "uiuc",
+  "field": "acceptance_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "admissions_stats"
+ },
+ {
+  "university": "uiuc",
+  "field": "intl_undergrad_tuition",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "uiuc",
+  "field": "living_cost",
+  "value": {
+   "amount": 15858.0,
+   "currency": "USD",
+   "period": "year"
+  },
+  "raw_value": {
+   "amount": 15858,
+   "currency": "USD",
+   "period": "year"
+  },
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "living_costs"
+ },
+ {
+  "university": "uiuc",
+  "field": "application_deadline",
+  "value": {
+   "month": 1,
+   "day": 5,
+   "year": null
+  },
+  "raw_value": "Jan 5",
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "deadlines"
+ },
+ {
+  "university": "uiuc",
+  "field": "student_visa",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "visa"
+ },
+ {
+  "university": "uiuc",
+  "field": "employment_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "outcomes"
+ },
+ {
+  "university": "uiuc",
+  "field": "median_salary",
+  "value": {
+   "amount": 79516.0,
+   "currency": "USD",
+   "period": "year"
+  },
+  "raw_value": {
+   "amount": 79516,
+   "currency": "USD",
+   "period": "year"
+  },
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "outcomes"
+ },
+ {
+  "university": "uiuc",
+  "field": "scholarships",
+  "value": [
+   "Native American Scholarship \u2013 Tribal Nations Scholarship for Non-Illinois Residents"
+  ],
+  "raw_value": [
+   {
+    "name": "Native American Scholarship \u2013 Tribal Nations Scholarship for Non-Illinois Residents",
+    "eligibility": "Students who are members of any federally recognized Tribal Nations and are not residents of the state of Illinois. Covers the difference between non-resident and resident tuition."
+   }
+  ],
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "scholarships"
+ },
+ {
+  "university": "waterloo",
+  "field": "founding_year",
+  "value": 1957,
+  "raw_value": 1957,
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "waterloo",
+  "field": "city",
+  "value": "Waterloo",
+  "raw_value": "Waterloo",
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "waterloo",
+  "field": "institution_type",
+  "value": "public",
+  "raw_value": "public",
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "waterloo",
+  "field": "total_enrollment",
+  "value": 41000,
+  "raw_value": 41000,
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "waterloo",
+  "field": "acceptance_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "waterloo",
+  "field": "intl_undergrad_tuition",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "waterloo",
+  "field": "living_cost",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "waterloo",
+  "field": "application_deadline",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "deadlines"
+ },
+ {
+  "university": "waterloo",
+  "field": "student_visa",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "visa"
+ },
+ {
+  "university": "waterloo",
+  "field": "employment_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "outcomes"
+ },
+ {
+  "university": "waterloo",
+  "field": "median_salary",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "outcomes"
+ },
+ {
+  "university": "waterloo",
+  "field": "scholarships",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "scholarships"
+ },
+ {
+  "university": "usyd",
+  "field": "founding_year",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "usyd",
+  "field": "city",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "usyd",
+  "field": "institution_type",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "usyd",
+  "field": "total_enrollment",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "usyd",
+  "field": "acceptance_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "usyd",
+  "field": "intl_undergrad_tuition",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "usyd",
+  "field": "living_cost",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "usyd",
+  "field": "application_deadline",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "deadlines"
+ },
+ {
+  "university": "usyd",
+  "field": "student_visa",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "visa"
+ },
+ {
+  "university": "usyd",
+  "field": "employment_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "usyd",
+  "field": "median_salary",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "usyd",
+  "field": "scholarships",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "scholarships"
+ },
+ {
+  "university": "edinburgh",
+  "field": "founding_year",
+  "value": 1583,
+  "raw_value": 1583,
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "edinburgh",
+  "field": "city",
+  "value": "Edinburgh",
+  "raw_value": "Edinburgh",
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "edinburgh",
+  "field": "institution_type",
+  "value": "public",
+  "raw_value": "public",
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "edinburgh",
+  "field": "total_enrollment",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "edinburgh",
+  "field": "acceptance_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "admissions_stats"
+ },
+ {
+  "university": "edinburgh",
+  "field": "intl_undergrad_tuition",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "edinburgh",
+  "field": "living_cost",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "living_costs"
+ },
+ {
+  "university": "edinburgh",
+  "field": "application_deadline",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "deadlines"
+ },
+ {
+  "university": "edinburgh",
+  "field": "student_visa",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "visa"
+ },
+ {
+  "university": "edinburgh",
+  "field": "employment_rate",
+  "value": 85.0,
+  "raw_value": 85,
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "outcomes"
+ },
+ {
+  "university": "edinburgh",
+  "field": "median_salary",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "outcomes"
+ },
+ {
+  "university": "edinburgh",
+  "field": "scholarships",
+  "value": [
+   "Edinburgh_University_Scholarships",
+   "Edinburgh_University_Scholarships_for_Research_Students",
+   "Research_Councils_Scholarships"
+  ],
+  "raw_value": [
+   {
+    "name": "Edinburgh_University_Scholarships",
+    "description": "Scholarships for international undergraduate students, covering tuition fees and living costs."
+   },
+   {
+    "name": "Edinburgh_University_Scholarships_for_Research_Students",
+    "description": "Scholarships for international research students, covering tuition fees and living costs."
+   },
+   {
+    "name": "Research_Councils_Scholarships",
+    "description": "Scholarships for international students, covering tuition fees and living costs."
+   }
+  ],
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "scholarships"
+ },
+ {
+  "university": "mcgill",
+  "field": "founding_year",
+  "value": 1821,
+  "raw_value": 1821,
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "mcgill",
+  "field": "city",
+  "value": "Montr\u00e9al",
+  "raw_value": "Montr\u00e9al",
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "mcgill",
+  "field": "institution_type",
+  "value": "public",
+  "raw_value": "public",
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "mcgill",
+  "field": "total_enrollment",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "mcgill",
+  "field": "acceptance_rate",
+  "value": 47.55,
+  "raw_value": 47.55,
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "admissions_stats"
+ },
+ {
+  "university": "mcgill",
+  "field": "intl_undergrad_tuition",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "mcgill",
+  "field": "living_cost",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "living_costs"
+ },
+ {
+  "university": "mcgill",
+  "field": "application_deadline",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "deadlines"
+ },
+ {
+  "university": "mcgill",
+  "field": "student_visa",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "visa"
+ },
+ {
+  "university": "mcgill",
+  "field": "employment_rate",
+  "value": 92.0,
+  "raw_value": 92,
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "outcomes"
+ },
+ {
+  "university": "mcgill",
+  "field": "median_salary",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "outcomes"
+ },
+ {
+  "university": "mcgill",
+  "field": "scholarships",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "scholarships"
+ },
+ {
+  "university": "ntu",
+  "field": "founding_year",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "ntu",
+  "field": "city",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "ntu",
+  "field": "institution_type",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "ntu",
+  "field": "total_enrollment",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "ntu",
+  "field": "acceptance_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "ntu",
+  "field": "intl_undergrad_tuition",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "ntu",
+  "field": "living_cost",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "ntu",
+  "field": "application_deadline",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "deadlines"
+ },
+ {
+  "university": "ntu",
+  "field": "student_visa",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "visa"
+ },
+ {
+  "university": "ntu",
+  "field": "employment_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "outcomes"
+ },
+ {
+  "university": "ntu",
+  "field": "median_salary",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "outcomes"
+ },
+ {
+  "university": "ntu",
+  "field": "scholarships",
+  "value": [
+   "Nanyang Global Scholarship"
+  ],
+  "raw_value": [
+   "Nanyang Global Scholarship"
+  ],
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "scholarships"
+ },
+ {
+  "university": "anu",
+  "field": "founding_year",
+  "value": 1946,
+  "raw_value": 1946,
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "anu",
+  "field": "city",
+  "value": "Canberra",
+  "raw_value": "Canberra",
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "anu",
+  "field": "institution_type",
+  "value": "public",
+  "raw_value": "public",
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "anu",
+  "field": "total_enrollment",
+  "value": 17380,
+  "raw_value": 17380,
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "anu",
+  "field": "acceptance_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "anu",
+  "field": "intl_undergrad_tuition",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "anu",
+  "field": "living_cost",
+  "value": {
+   "amount": 24000.0,
+   "currency": "AUD",
+   "period": "year"
+  },
+  "raw_value": {
+   "amount": "AU$24,000 - $28,500",
+   "currency": "AUD",
+   "period": "academic year"
+  },
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "living_costs"
+ },
+ {
+  "university": "anu",
+  "field": "application_deadline",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "deadlines"
+ },
+ {
+  "university": "anu",
+  "field": "student_visa",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "visa"
+ },
+ {
+  "university": "anu",
+  "field": "employment_rate",
+  "value": 90.0,
+  "raw_value": 90,
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "outcomes"
+ },
+ {
+  "university": "anu",
+  "field": "median_salary",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "outcomes"
+ },
+ {
+  "university": "anu",
+  "field": "scholarships",
+  "value": [
+   "ANU Vice-Chancellor\u2019s International Achievement Award",
+   "ANU International Achievement Award"
+  ],
+  "raw_value": [
+   "ANU Vice-Chancellor\u2019s International Achievement Award",
+   "ANU International Achievement Award"
+  ],
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "scholarships"
+ },
+ {
+  "university": "auckland",
+  "field": "founding_year",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "auckland",
+  "field": "city",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "auckland",
+  "field": "institution_type",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "auckland",
+  "field": "total_enrollment",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "auckland",
+  "field": "acceptance_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "auckland",
+  "field": "intl_undergrad_tuition",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "auckland",
+  "field": "living_cost",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "auckland",
+  "field": "application_deadline",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "deadlines"
+ },
+ {
+  "university": "auckland",
+  "field": "student_visa",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "visa"
+ },
+ {
+  "university": "auckland",
+  "field": "employment_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "auckland",
+  "field": "median_salary",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "auckland",
+  "field": "scholarships",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "scholarships"
+ },
+ {
+  "university": "uq",
+  "field": "founding_year",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "uq",
+  "field": "city",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "uq",
+  "field": "institution_type",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "uq",
+  "field": "total_enrollment",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "uq",
+  "field": "acceptance_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "uq",
+  "field": "intl_undergrad_tuition",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "uq",
+  "field": "living_cost",
+  "value": {
+   "amount": 1200.0,
+   "currency": "AUD",
+   "period": "month"
+  },
+  "raw_value": {
+   "amount": 1200,
+   "currency": "AUD",
+   "period": "month"
+  },
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "living_costs"
+ },
+ {
+  "university": "uq",
+  "field": "application_deadline",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "deadlines"
+ },
+ {
+  "university": "uq",
+  "field": "student_visa",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "visa"
+ },
+ {
+  "university": "uq",
+  "field": "employment_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "outcomes"
+ },
+ {
+  "university": "uq",
+  "field": "median_salary",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "outcomes"
+ },
+ {
+  "university": "uq",
+  "field": "scholarships",
+  "value": [
+   "UQ International Excellence Scholarship",
+   "UQ International Undergraduate Scholarship"
+  ],
+  "raw_value": [
+   "UQ International Excellence Scholarship",
+   "UQ International Undergraduate Scholarship"
+  ],
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "scholarships"
+ },
+ {
+  "university": "kuleuven",
+  "field": "founding_year",
+  "value": 1425,
+  "raw_value": 1425,
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "kuleuven",
+  "field": "city",
+  "value": "Leuven",
+  "raw_value": "Leuven",
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "kuleuven",
+  "field": "institution_type",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "kuleuven",
+  "field": "total_enrollment",
+  "value": 66306,
+  "raw_value": 66306,
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "facts"
+ },
+ {
+  "university": "kuleuven",
+  "field": "acceptance_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "kuleuven",
+  "field": "intl_undergrad_tuition",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "kuleuven",
+  "field": "living_cost",
+  "value": {
+   "amount": 1400.0,
+   "currency": "EUR",
+   "period": "month"
+  },
+  "raw_value": {
+   "amount": 1400,
+   "currency": "EUR",
+   "period": "monthly"
+  },
+  "confidence": 0.9,
+  "status": "accepted",
+  "page_type": "living_costs"
+ },
+ {
+  "university": "kuleuven",
+  "field": "application_deadline",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "deadlines"
+ },
+ {
+  "university": "kuleuven",
+  "field": "student_visa",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "visa"
+ },
+ {
+  "university": "kuleuven",
+  "field": "employment_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "kuleuven",
+  "field": "median_salary",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "kuleuven",
+  "field": "scholarships",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "scholarships"
+ },
+ {
+  "university": "hku",
+  "field": "founding_year",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "hku",
+  "field": "city",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "hku",
+  "field": "institution_type",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "hku",
+  "field": "total_enrollment",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "hku",
+  "field": "acceptance_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "hku",
+  "field": "intl_undergrad_tuition",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "hku",
+  "field": "living_cost",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "hku",
+  "field": "application_deadline",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "deadlines"
+ },
+ {
+  "university": "hku",
+  "field": "student_visa",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "visa"
+ },
+ {
+  "university": "hku",
+  "field": "employment_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "outcomes"
+ },
+ {
+  "university": "hku",
+  "field": "median_salary",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "outcomes"
+ },
+ {
+  "university": "hku",
+  "field": "scholarships",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "scholarships"
+ },
+ {
+  "university": "iitb",
+  "field": "founding_year",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "iitb",
+  "field": "city",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "iitb",
+  "field": "institution_type",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "iitb",
+  "field": "total_enrollment",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "facts"
+ },
+ {
+  "university": "iitb",
+  "field": "acceptance_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "iitb",
+  "field": "intl_undergrad_tuition",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "iitb",
+  "field": "living_cost",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "tuition"
+ },
+ {
+  "university": "iitb",
+  "field": "application_deadline",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "deadlines"
+ },
+ {
+  "university": "iitb",
+  "field": "student_visa",
+  "value": null,
+  "confidence": 0.0,
+  "status": "not_found",
+  "page_type": "visa"
+ },
+ {
+  "university": "iitb",
+  "field": "employment_rate",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "iitb",
+  "field": "median_salary",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ },
+ {
+  "university": "iitb",
+  "field": "scholarships",
+  "value": null,
+  "confidence": 0.0,
+  "status": "no_snapshot"
+ }
+]

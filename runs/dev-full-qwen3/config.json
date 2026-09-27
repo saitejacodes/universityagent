@@ -1,0 +1,21 @@
+{
+ "run_id": "dev-full-qwen3",
+ "model": "qwen3:8b",
+ "options": {
+  "retrieval": true,
+  "grounding": true,
+  "context_budget": 7000,
+  "max_tokens": 1500
+ },
+ "universities": [
+  "mit",
+  "utoronto",
+  "imperial"
+ ],
+ "llm_stats": {
+  "calls": 15,
+  "cache_hits": 5,
+  "prompt_tokens": 16594,
+  "completion_tokens": 1421
+ }
+}

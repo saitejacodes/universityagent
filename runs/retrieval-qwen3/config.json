@@ -1,0 +1,44 @@
+{
+ "run_id": "retrieval-qwen3",
+ "model": "qwen3:8b",
+ "options": {
+  "retrieval": true,
+  "grounding": false,
+  "context_budget": 7000,
+  "max_tokens": 1500
+ },
+ "universities": [
+  "mit",
+  "stanford",
+  "berkeley",
+  "gatech",
+  "cmu",
+  "utoronto",
+  "ubc",
+  "imperial",
+  "tum",
+  "ethz",
+  "tudelft",
+  "tcd",
+  "unsw",
+  "uw",
+  "uiuc",
+  "waterloo",
+  "usyd",
+  "edinburgh",
+  "mcgill",
+  "ntu",
+  "anu",
+  "auckland",
+  "uq",
+  "kuleuven",
+  "hku",
+  "iitb"
+ ],
+ "llm_stats": {
+  "calls": 0,
+  "cache_hits": 161,
+  "prompt_tokens": 0,
+  "completion_tokens": 0
+ }
+}
