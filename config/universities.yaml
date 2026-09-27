@@ -1,50 +1,354 @@
-# To add a 4th university: just add a new block here — zero code changes needed
-
+# Official pages per university. Every URL was verified with scripts/probe_url.py:
+# fetchable by the pipeline's own polite fetcher (robots.txt obeyed, no bot-wall evasion)
+# and containing the target fact. Add a university by adding a block; no code changes.
 universities:
-  - id: mit
-    name: Massachusetts Institute of Technology
-    country: USA
-    currency: USD
-    pages:
-      about: https://web.mit.edu/aboutmit/
-      tuition: https://sfs.mit.edu/undergraduate-students/the-cost-of-attendance/coa/
-      scholarships: https://sfs.mit.edu/undergraduate-students/types-of-aid/mit-scholarships-grants/
-      courses: https://student.mit.edu/catalog/index.cgi
-      deadlines: https://mitadmissions.org/apply/firstyear/dates-deadlines/
-      visa: https://iso.mit.edu/immigration-topics/students/
-      # Career outcomes page: aggregates employment rate + salary data by major/field
-      employment: https://capd.mit.edu/explore-careers/career-outcomes/
-      # Living costs are embedded in the cost-of-attendance budget — same page as tuition
-      living: https://sfs.mit.edu/undergraduate-students/the-cost-of-attendance/coa/
-
-  - id: unimelb
-    name: University of Melbourne
-    country: Australia
-    currency: AUD
-    pages:
-      about: https://about.unimelb.edu.au/
-      tuition: https://students.unimelb.edu.au/admin/fees
-      scholarships: https://scholarships.unimelb.edu.au/
-      courses: https://handbook.unimelb.edu.au/
-      deadlines: https://study.unimelb.edu.au/how-to-apply/key-dates
-      visa: https://students.unimelb.edu.au/student-support/international-student-support/visas
-      # Graduate outcomes page: employment rates, salaries, destinations by faculty
-      employment: https://about.unimelb.edu.au/strategy/melbourne-2030/graduate-outcomes
-      # Student fees page covers living cost estimates for international students
-      living: https://students.unimelb.edu.au/admin/fees
-
-  - id: utoronto
-    name: University of Toronto
-    country: Canada
-    currency: CAD
-    pages:
-      about: https://www.sgs.utoronto.ca/about/
-      tuition: https://fees.utoronto.ca/
-      scholarships: https://www.sgs.utoronto.ca/awards/
-      courses: https://artsci.calendar.utoronto.ca/
-      deadlines: https://www.sgs.utoronto.ca/future-students/admission-application-requirements/
-      visa: https://internationalexperience.utoronto.ca/
-      # Graduate outcomes page: employment stats, salary ranges, alumni destinations
-      employment: https://www.sgs.utoronto.ca/about/explore-our-data/career-outcomes/
-      # Cost of living breakdown for prospective students
-      living: https://future.utoronto.ca/finances/
+- id: mit
+  name: Massachusetts Institute of Technology
+  country: USA
+  currency: USD
+  pages:
+    facts: https://facts.mit.edu/
+    admissions_stats: https://mitadmissions.org/apply/process/stats/
+    tuition: https://sfs.mit.edu/undergraduate-students/the-cost-of-attendance/coa/
+    living_costs: https://sfs.mit.edu/undergraduate-students/the-cost-of-attendance/coa/
+    scholarships: https://sfs.mit.edu/undergraduate-students/types-of-aid/mit-scholarships-grants/
+    deadlines: https://mitadmissions.org/apply/firstyear/deadlines-requirements/
+    visa: https://iso.mit.edu/getting-started/obtaining-a-visa/
+- id: stanford
+  name: Stanford University
+  country: USA
+  currency: USD
+  pages:
+    facts: https://facts.stanford.edu/
+    tuition: https://financialaid.stanford.edu/undergrad/budget/index.html
+    living_costs: https://financialaid.stanford.edu/undergrad/budget/index.html
+    scholarships: https://financialaid.stanford.edu/undergrad/types/index.html
+    deadlines: https://admission.stanford.edu/apply/first-year/
+    visa: https://bechtel.stanford.edu/navigate-international-life/visas/f-1-and-j-1-student-visas
+- id: berkeley
+  name: University of California, Berkeley
+  country: USA
+  currency: USD
+  pages:
+    facts: https://opa.berkeley.edu/campus-data/uc-berkeley-quick-facts
+    admissions_stats: https://opa.berkeley.edu/campus-data/uc-berkeley-quick-facts
+    tuition: https://internationaloffice.berkeley.edu/students/current/expenses
+    living_costs: https://internationaloffice.berkeley.edu/students/current/expenses
+    scholarships: https://internationaloffice.berkeley.edu/students/financial-aid/undergraduate-financial-aid
+    deadlines: https://admission.universityofcalifornia.edu/how-to-apply/applying-as-a-first-year/dates-and-deadlines.html
+    visa: https://internationaloffice.berkeley.edu/visa-application
+- id: gatech
+  name: Georgia Institute of Technology
+  country: USA
+  currency: USD
+  pages:
+    facts: https://www.gatech.edu/about
+    deadlines: https://admission.gatech.edu/first-year/deadlines
+    visa: https://isss.oie.gatech.edu/content/applying-f-1j-1-visa
+- id: cmu
+  name: Carnegie Mellon University
+  country: USA
+  currency: USD
+  pages:
+    facts: https://www.cmu.edu/about/
+    tuition: https://www.cmu.edu/sfs/tuition/undergraduate/index.html
+    living_costs: https://www.cmu.edu/sfs/tuition/undergraduate/index.html
+    deadlines: https://www.cmu.edu/admission/admission/application-plans-deadlines
+    visa: https://www.cmu.edu/oie/travel/visa/index.html
+    outcomes: https://www.cmu.edu/admission/costs-aid
+- id: utoronto
+  name: University of Toronto
+  country: Canada
+  currency: CAD
+  pages:
+    facts: https://www.utoronto.ca/about-u-of-t/quick-facts
+    tuition: https://www.registrar.utoronto.ca/fees-payments/tuition-fee-schedules/
+    living_costs: https://future.utoronto.ca/housing
+    scholarships: https://future.utoronto.ca/scholarships-international-students
+    deadlines: https://future.utoronto.ca/deadlines
+    visa: https://future.utoronto.ca/study-permits
+- id: ubc
+  name: University of British Columbia
+  country: Canada
+  currency: CAD
+  pages:
+    facts: https://www.ubc.ca/about/facts.html
+    tuition: https://vancouver.calendar.ubc.ca/fees/tuition-fees/undergraduate
+    deadlines: https://vancouver.calendar.ubc.ca/admissions/undergraduate-application-and-document-deadlines
+    visa: https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit.html
+- id: imperial
+  name: Imperial College London
+  country: United Kingdom
+  currency: GBP
+  pages:
+    facts: https://www.imperial.ac.uk/about/introducing-imperial/
+    tuition: https://www.imperial.ac.uk/study/courses/undergraduate/computing-beng/
+    living_costs: https://www.imperial.ac.uk/study/fees-and-funding/living-costs/
+    scholarships: https://www.imperial.ac.uk/study/fees-and-funding/undergraduate/bursaries-grants-scholarships/
+    deadlines: https://www.imperial.ac.uk/study/apply/undergraduate/process/deadlines/
+    visa: https://www.imperial.ac.uk/students/international-students/visas-and-immigration/student-route-visa/
+    outcomes: https://www.imperial.ac.uk/study/courses/undergraduate/computing-beng/
+- id: tum
+  name: Technical University of Munich
+  country: Germany
+  currency: EUR
+  pages:
+    facts: https://www.tum.de/en/about-tum/facts-and-figures/tum-in-figures
+    tuition: https://www.tum.de/en/studies/fees/tuition
+    scholarships: https://www.tum.de/en/studies/fees-and-financial-aid/scholarships/tum-scholarships
+    deadlines: https://www.tum.de/en/studies/degree-programs/detail/informatics-bachelor-of-science-bsc
+    visa: https://www.tum.de/en/studies/application/application-info-portal/visa-and-residency
+- id: ethz
+  name: ETH Zurich
+  country: Switzerland
+  currency: CHF
+  pages:
+    facts: https://ethz.ch/en/the-eth-zurich/_jcr_content/par/table.tableComp.json
+    tuition: https://ethz.ch/students/en/studies/financial/tuition-fees.html
+    living_costs: https://ethz.ch/en/studies/financial.html
+    scholarships: https://ethz.ch/students/en/studies/financial/scholarships/cost-of-living.html
+    deadlines: https://ethz.ch/en/studies/bachelor/application/non-swiss-matriculation-certificate/dates.html
+    visa: https://ethz.ch/en/studies/international/after-admission/immigration/visa.html
+- id: tudelft
+  name: Delft University of Technology
+  country: Netherlands
+  currency: EUR
+  pages:
+    facts: https://www.tudelft.nl/en/about-tu-delft
+    tuition: https://www.tudelft.nl/en/education/study-programme-orientation/practical-matters/tuition-fee-finances
+    living_costs: https://www.tudelft.nl/en/education/study-programme-orientation/practical-matters/tuition-fee-finances
+    deadlines: https://www.tudelft.nl/en/education/admission-and-application/bsc-international-diploma/dates-deadlines
+    visa: https://www.tudelft.nl/en/education/study-programme-orientation/practical-matters/visa-residence-permit
+- id: tcd
+  name: Trinity College Dublin
+  country: Ireland
+  currency: EUR
+  pages:
+    facts: https://www.tcd.ie/about/
+    tuition: https://www.tcd.ie/courses/undergraduate/fees/
+    living_costs: https://www.tcd.ie/study/international/welcome/cost-of-living/
+    scholarships: https://www.tcd.ie/study/international/scholarships/undergraduate/
+    deadlines: https://www.tcd.ie/study/apply/making-an-application/undergraduate/direct-applications/
+    visa: https://www.irishimmigration.ie/coming-to-study-in-ireland/
+    outcomes: https://www.tcd.ie/study/international/why-trinity/careers/
+- id: unsw
+  name: UNSW Sydney
+  country: Australia
+  currency: AUD
+  pages:
+    facts: https://www.unsw.edu.au/about-us/our-story
+    tuition: https://www.unsw.edu.au/study/undergraduate/bachelor-of-computer-science?studentType=International
+    living_costs: https://www.unsw.edu.au/study/your-future/cost-of-living-sydney
+    scholarships: https://www.unsw.edu.au/study/how-to-apply/scholarships
+    deadlines: https://www.unsw.edu.au/study/international-students/admissions-info
+    visa: https://www.studyaustralia.gov.au/en/plan-your-move/your-guide-to-visas
+- id: uw
+  name: University of Washington (Seattle)
+  country: USA
+  currency: USD
+  pages:
+    facts: https://www.washington.edu/about/
+    admissions_stats: https://admit.washington.edu/apply/first-year/by-the-numbers/
+    tuition: https://admit.washington.edu/costs/coa/
+    living_costs: https://admit.washington.edu/costs/coa/
+    deadlines: https://admit.washington.edu/apply/first-year/
+    visa: https://iss.washington.edu/travel/visas/
+    outcomes: https://careers.uw.edu/outcomes/
+- id: uiuc
+  name: University of Illinois Urbana-Champaign
+  country: USA
+  currency: USD
+  pages:
+    facts: https://illinois.edu/about/
+    admissions_stats: https://www.admissions.illinois.edu/admit-rates/
+    tuition: https://www.admissions.illinois.edu/tuition/
+    living_costs: https://www.admissions.illinois.edu/tuition/
+    scholarships: https://www.osfa.illinois.edu/types-of-aid/scholarships/merit-based-scholarships/
+    deadlines: https://www.admissions.illinois.edu/first-year-dates/
+    visa: https://isss.illinois.edu/students/pre-arrival/
+    outcomes: https://illinois.edu/about/
+- id: waterloo
+  name: University of Waterloo
+  country: Canada
+  currency: CAD
+  pages:
+    facts: https://uwaterloo.ca/about/facts
+    tuition: https://uwaterloo.ca/future-students/financing/tuition
+    living_costs: https://uwaterloo.ca/future-students/financing
+    scholarships: https://uwaterloo.ca/future-students/financing/international-scholarships
+    deadlines: https://uwaterloo.ca/future-students/admissions/deadlines
+    visa: https://uwaterloo.ca/future-students/international-students/visas
+    outcomes: https://uwaterloo.ca/future-students/why-waterloo
+- id: usyd
+  name: University of Sydney
+  country: Australia
+  currency: AUD
+  pages:
+    facts: https://www.sydney.edu.au/about-us/our-story/our-history.html
+    tuition: https://www.sydney.edu.au/study/fees-and-loans/international-student-tuition-fees.html
+    living_costs: https://www.sydney.edu.au/study/fees-and-loans/other-costs/living-costs.html
+    scholarships: https://www.sydney.edu.au/study/fees-and-loans/scholarships/sydney-international-student-award.html
+    deadlines: https://www.sydney.edu.au/study/applying/application-dates.html
+    visa: https://www.studyaustralia.gov.au/en/plan-your-move/your-guide-to-visas
+- id: edinburgh
+  name: University of Edinburgh
+  country: United Kingdom
+  currency: GBP
+  pages:
+    facts: https://www.ed.ac.uk/about/our-history
+    admissions_stats: https://study.ed.ac.uk/undergraduate/applying/selection/admissions-statistics
+    living_costs: https://study.ed.ac.uk/undergraduate/fees-funding/living-costs
+    scholarships: https://registryservices.ed.ac.uk/student-funding/undergraduate/international
+    deadlines: https://study.ed.ac.uk/undergraduate/applying/making-application/when-apply
+    visa: https://www.gov.uk/student-visa
+    outcomes: https://blogs.ed.ac.uk/careersinformed/what-do-university-of-edinburgh-graduates-do/
+- id: mcgill
+  name: McGill University
+  country: Canada
+  currency: CAD
+  pages:
+    facts: https://www.mcgill.ca/about
+    admissions_stats: https://www.mcgill.ca/es/admissions-profile
+    living_costs: https://www.mcgill.ca/internationalstudents/faqs/caq-faqs/new-students
+    scholarships: https://www.mcgill.ca/studentaid/scholarships-aid/future-undergrads/entrance-scholarships
+    deadlines: https://www.mcgill.ca/importantdates/channels/event/application-deadline-fall-2027-admission-undergraduate-programs-applicants-studying-or-who-last-370820
+    visa: https://www.mcgill.ca/internationalstudents/immigration-documents/documents/study-permit-application-guide/how-apply
+    outcomes: https://www.mcgill.ca/caps/publications/destinationsurvey
+- id: ntu
+  name: Nanyang Technological University
+  country: Singapore
+  currency: SGD
+  pages:
+    facts: https://www.ntu.edu.sg/about-us
+    tuition: https://www.ntu.edu.sg/admissions/undergraduate/financial-matters/tuition-fees/accepted-programme-offer-in-2026
+    living_costs: https://www.ntu.edu.sg/admissions/undergraduate/admission-guide/international-qualifications
+    scholarships: https://www.ntu.edu.sg/admissions/undergraduate/scholarships/scholarship-opportunities/detail/nanyang-scholarship
+    deadlines: https://www.ntu.edu.sg/admissions/undergraduate/admission-guide/international-qualifications
+    visa: https://www.ica.gov.sg/reside/STP/apply
+    outcomes: https://www.ntu.edu.sg/news/detail/steady-employment-outcomes-for-ntu-class-of-2025
+- id: anu
+  name: Australian National University
+  country: Australia
+  currency: AUD
+  pages:
+    facts: https://www.anu.edu.au/about/facts-about-anu
+    tuition: https://programsandcourses.anu.edu.au/2027/program/AACOM
+    living_costs: https://www.anu.edu.au/students/program-administration/fees-payments/estimated-cost-of-living-in-canberra
+    scholarships: https://study.anu.edu.au/scholarships
+    deadlines: https://study.anu.edu.au/apply/international-applications
+    visa: https://study.anu.edu.au/apply/international-student-visa-requirements
+    outcomes: https://study.anu.edu.au/explore-anu/stories/7-reasons-why-canberra-perfect-postgraduate-students
+- id: auckland
+  name: University of Auckland
+  country: New Zealand
+  currency: NZD
+  pages:
+    facts: https://www.auckland.ac.nz/en/about-us.html
+    tuition: https://www.auckland.ac.nz/en/study/fees-and-money-matters/tuition-fees/international-student-fees/undergraduate-international-fees.html
+    living_costs: https://www.auckland.ac.nz/en/students/student-support/personal-support/international-student-support/visa-information/How-to-apply-for-a-student-visa/Student-visa-applications-for-new-students.html
+    scholarships: https://www.auckland.ac.nz/en/study/scholarships-and-awards/scholarship-types/scholarships-for-international-students/undergraduate-scholarships-for-international-students.html
+    deadlines: https://www.auckland.ac.nz/en/study/applications-and-admissions/how-to-apply/undergraduate-application-closing-dates.html
+    visa: https://www.auckland.ac.nz/en/students/student-support/personal-support/international-student-support/visa-information/How-to-apply-for-a-student-visa/Student-visa-applications-for-new-students.html
+- id: uq
+  name: University of Queensland
+  country: Australia
+  currency: AUD
+  pages:
+    facts: https://about.uq.edu.au/profile-rankings
+    tuition: https://study.uq.edu.au/study-options/programs/bachelor-computer-science-2559
+    living_costs: https://study.uq.edu.au/university-life/living-in-queensland/cost-living
+    scholarships: https://study.uq.edu.au/stories/discover-5-must-know-scholarships-international-students
+    deadlines: https://study.uq.edu.au/admissions/undergraduate/submit-your-application
+    visa: https://study.uq.edu.au/university-life/getting-prepared-to-come-to-australia/student-visas
+    outcomes: https://study.uq.edu.au/stories/why-uq-world-top-50-university
+- id: kuleuven
+  name: KU Leuven
+  country: Belgium
+  currency: EUR
+  pages:
+    facts: https://www.kuleuven.be/english/about-kuleuven/facts-and-figures
+    living_costs: https://www.kuleuven.be/english/life-at-ku-leuven/money-matters/cost-of-living-in-belgium
+    scholarships: https://www.kuleuven.be/scholarships/year/2026-2027/general-tuition-fee-waiver
+    deadlines: https://www.kuleuven.be/english/apply/application-instructions/apply-to-kuleuven
+    visa: https://www.kuleuven.be/english/life-at-ku-leuven/immigration-residence/long-stay-visa-type-d-visa-for-stays-longer-than-90-days
+- id: hku
+  name: University of Hong Kong
+  country: Hong Kong SAR, China
+  currency: HKD
+  pages:
+    facts: https://www.hku.hk/en/about-hku/history
+    tuition: https://admissions.hku.hk/fees-and-scholarships/fees
+    living_costs: https://admissions.hku.hk/fees-and-scholarships/fees
+    scholarships: https://admissions.hku.hk/explore/news/university-of-hong-kong-offers-entrance-scholarships-international-students-realise
+    deadlines: https://admissions.hku.hk/apply/international-qualifications
+    visa: https://www.immd.gov.hk/eng/services/visas/study.html
+    outcomes: https://horizons.hku.hk/research-stories/strong-employer-confidence-in-hku-graduates/
+- id: iitb
+  name: Indian Institute of Technology Bombay
+  country: India
+  currency: INR
+  pages:
+    facts: https://www.iitb.ac.in/about
+    tuition: https://acad.iitb.ac.in/details-fees-payable
+    living_costs: https://acad.iitb.ac.in/details-fees-payable
+    deadlines: https://jeeadv.ac.in/
+    visa: https://www.ir.iitb.ac.in/
+excluded:
+- id: umich
+  name: University of Michigan (Ann Arbor)
+  usable_pages: 1
+  probe_outcomes:
+  - blocked
+  - ok
+  notes: 'The entire umich.edu domain is behind a Cloudflare managed challenge (HTTP 403, header ''cf-mitigated:
+    challenge'') for the pipeline fetcher AND for WebFetch: tested umich.edu, www.umich.edu/about/, obp,
+    admissions, finaid, internationalcenter, ro (registrar), careercenter, news, record - all 403. Not'
+- id: oxford
+  name: University of Oxford
+  usable_pages: 2
+  probe_outcomes:
+  - ok
+  - robots_disallowed
+  notes: 'www.ox.ac.uk is behind a Cloudflare managed challenge: robots.txt returns 403, so the fetcher
+    treats the whole host as robots_disallowed (WebFetch also gets 403). careers.ox.ac.uk and academic.admin.ox.ac.uk
+    redirect into www.ox.ac.uk (same block). ox.ac.uk URLs above were confirmed as live link tar'
+- id: ucl
+  name: University College London
+  usable_pages: 1
+  probe_outcomes:
+  - blocked
+  - not_found
+  - ok
+  notes: Entire www.ucl.ac.uk host (incl. homepage, /students/, /careers/, /news/, /prospective-students/)
+    serves a Cloudflare 'Just a moment...' managed challenge (HTTP 403) to the pipeline UA and to WebFetch;
+    not bypassed. robots.txt itself returns 200. All UCL URLs above returned 403 so their content coul
+- id: unimelb
+  name: University of Melbourne
+  usable_pages: 1
+  probe_outcomes:
+  - blocked
+  - not_found
+  - ok
+  notes: Every public unimelb.edu.au host tested (www, about, study, students, scholarships, gradresearch;
+    students.unimelb.edu.au/careers) returns a Cloudflare 'Just a moment...' managed challenge (HTTP 403)
+    to the pipeline UA (also 403 with a browser UA via curl); not bypassed. URLs above are the ones alre
+- id: nus
+  name: National University of Singapore
+  usable_pages: 2
+  probe_outcomes:
+  - blocked
+  - not_found
+  - ok
+  notes: 'BOT WALL: every www.nus.edu.sg / nus.edu.sg URL probed (about, about/facts-and-figures, oam/admissions/undergraduate/international-qualifications,
+    registrar/.../undergraduate-fees) returns HTTP 200 with a 212-byte Imperva/Incapsula JS challenge
+    stub (<script src="/_Incapsula_Resource?...">), which t'
+- id: monash
+  name: Monash University
+  usable_pages: 1
+  probe_outcomes:
+  - blocked
+  - not_found
+  - ok
+  notes: 'BOT WALL: www.monash.edu (hosts all Monash study/about/fees/scholarship pages) returns HTTP
+    403 with ''cf-mitigated: challenge'' / server: cloudflare (Cloudflare managed challenge) for the pipeline
+    UA and for a browser UA via curl. Confirmed on /about, /about/who/facts-and-figures and /study/fees-scho'
